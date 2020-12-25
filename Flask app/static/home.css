@@ -1,0 +1,35 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0;
+
+  }
+  
+  .banner h1 {
+    margin: 0;
+    color: rgb(253, 128, 128);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .banner p {
+    font-size: 20px;
+    color: rgb(202, 241, 110);
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+.btn {
+    background-color: rgb(152, 237, 243);
+
+}
+
+.btn:hover{
+    background-color: rgb(5, 143, 5);
+}
+  

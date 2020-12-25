@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+{% block title %} Profile Page{% endblock%}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <script src="{{url_for('static', filename='profile.js')}}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='profile.css')}}">
+    <title></title>
+    </head>
+    <body>
+        <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+            <span class=flashes><strong>Yay!</strong> 🎉 
+               
+
+            <a data-dismiss="alert" aria-label="Close">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              {% for message in messages %}
+                  <h1>{{ message }}</h1>
+              {% endfor %}</span>
+          {% endif %}
+      {% endwith %}
+    </body>
+    </html>
+{% endblock %}

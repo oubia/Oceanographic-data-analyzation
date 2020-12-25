@@ -1,0 +1,76 @@
+{%extends "base.html"%}
+{% block title %} Login Page{% endblock%}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="{{url_for('static', filename='login.js')}}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='login.css')}}">
+
+    <title>Login Page</title>
+</head>
+<body>
+
+  <div class="content-wrapper">
+    <div class="content">
+        <div class="signup-wrapper shadow-box">
+            <div class="company-details ">
+              
+                <div class="shadow"></div>
+                <div class="wrapper-1">
+                    <div class="logo">
+   <div class="icon-food">
+     
+                </div>
+                    </div>
+                    <h1 class="title">cupcake co.</h1>
+                    <div class="slogan">We deliver cupcakes to you.</div>
+                </div>
+
+            </div>
+            <div class="signup-form ">
+                <div class="wrapper-2">
+                    <div class="form-title">Sign up today!</div>
+                    <div class="form">
+                        <form method=post>
+                            <p class="content-item">
+                                <label>full name
+                                    <input type="text" placeholder="Lorem ipsum" name="nm"  required>
+                                </label>
+                            </p>
+
+                            <p class="content-item">
+                                <label>email address
+                                    <input type="text"  placeholder="lorem@loremipsum.com" name="email" required>
+                                </label>
+                            </p>
+
+                            <p class="content-item">
+
+                                <label>password
+                                    <input type="password" placeholder="*****" name="psw" required>
+                                </label>
+                            </p>
+
+
+                            <button id="myButton" class="signup">Back home </button>
+                            <a href="/profile" class="login">login</a>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+</body>
+</html>
+{% endblock%}

@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+{% block title %} News Page{% endblock%}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='news.css')}}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class=content>
+        <div class="wrapper-1">
+          <div class="wrapper-2">
+            <h1>Thank you !</h1>
+            <!-- <p>Thanks for subscribing to our news letter.  </p>
+            <p>you should receive a confirmation email soon  </p> -->
+            <a href="/profile" class="go-home" >
+            go to profile
+
+            </a>
+          </div>
+          <div class="footer-like">
+            <p>Do you want go back to home page?
+             <a href="/home">Click here to back home</a>
+            </p>
+          </div>
+      </div>
+      </div>
+      
+      
+      
+      <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Source+Sans+Pro" rel="stylesheet">
+</body>
+</html>
+{% endblock %}
