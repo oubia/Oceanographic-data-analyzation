@@ -12,10 +12,21 @@ body {
 }
 
 
+/* logo  */
+
+.logo_img {
+    border-radius: 2%;
+    width: 10%;
+    margin: 4px;
+}
+
+
 /* top nav bar */
 
 .topnav img {
-    height: 91px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 ul {
@@ -124,4 +135,15 @@ ul {
 
 .hero-text p {
     margin-bottom: 30px;
+}
+
+#mapid {
+    display: grid;
+    height: 180px;
+    width: 60%;
+    justify-self: center;
+}
+
+.container {
+    align-items: center;
 }

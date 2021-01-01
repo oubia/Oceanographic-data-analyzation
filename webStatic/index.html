@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- leaflet js link -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+    <!-- leaglet js link -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
     <link rel="stylesheet" href="index.css">
     <title>Home Page</title>
 </head>
@@ -11,13 +18,13 @@
 <body>
     <div class="topnav" id="myTopnav">
 
-        <a href="./"><img class="img" src="images/logo.png"></a>
+        <a href="./index.html"><img class=" img" src="logo3.PNG"></a>
 
         <ul>
             <a href="./index.html" class="active">Home</a>
-            <a href="./explore.html">Explore</a>
+            <!-- <a href="./explore.html">Explore</a>
             <a href="./about.html">About</a>
-            <a href="./contact.html">Contact</a>
+            <a href="./contact.html">Contact</a> -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -34,6 +41,13 @@
         </div>
     </div>
     <br>
+
+
+    <div class="container">
+        <div class="choise_bar"></div>
+        <div id="mapid"></div>
+        <div class="reg_line"></div>
+    </div>
 
 
 
