@@ -5,13 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- 
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+ -->
+
+
     <!-- leaflet js link -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-    <!-- leaglet js link -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="select.css">
     <link rel="stylesheet" href="index.css">
+
     <title>Home Page</title>
 </head>
 
@@ -37,17 +46,108 @@
         <div class="hero-text">
             <h1>Some text here with db </h1>
             <p>Short title or description from db <br> this is or first db whish allow the client to write what ever he want's in this dive </p>
-            <a href="./explore.html">Explore</a>
+            <a href="./index.html">Home</a>
         </div>
     </div>
     <br>
 
 
     <div class="container">
-        <div class="choise_bar"></div>
-        <div id="mapid"></div>
+        <div class="choix_bar">
+            <div class="fs_select">
+                <label for="pet-select">Choose a data:</label>
+                <div class="form-group col-sm-12">
+                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                        <option value="Select A Data">Select A Data...</option>
+                        <option value="Data 1">Data 1</option>
+                        <option value="Data 2">Data 2</option>
+                        <option value="Data 3">Data 3</option>
+                        <option value="Data 4">Data 4</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="sd_select">
+                <label for="pet-select">Choose a data:</label>
+                <div class="form-group col-sm-12">
+                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                      <option value="Select A Data">Select A Data...</option>
+                      <option value="Data 1">Data 1</option>
+                      <option value="Data 2">Data 2</option>
+                      <option value="Data 3">Data 3</option>
+                      <option value="Data 4">Data 4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="th_select">
+                <label for="pet-select">Choose a data:</label>
+                <div class="form-group col-sm-12">
+                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                      <option value="Select A Data">Select A Data...</option>
+                      <option value="Data 1">Data 1</option>
+                      <option value="Data 2">Data 2</option>
+                      <option value="Data 3">Data 3</option>
+                      <option value="Data 4">Data 4</option>
+                    </select>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="main-container">
+            <img id="map" src='https://api.mapbox.com/oubia?access_token=pk.eypk.eyJ1Ijoib3ViaWEiLCJhIjoiY2tqajUzeHR1OW9nZjJybGJyNWFsbm0wOSJ9.OAqZ35gZBDkZ8ucOXOlePQ'>
+
+        </div>
+
         <div class="reg_line"></div>
     </div>
+
+
+
+
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h1>Company</h1>
+                <ul>
+                    <li><a href="">Some txt</a></li>
+                    <li><a href="">Some txt</a></li>
+                    <li><a href="">Some txt</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Informations</h1>
+                <ul>
+                    <li><a href="mailto:contact@toubkalatlasmorocco.com">Mail : xxxxxxx@emial.com</a></li>
+                    <li><a href="tel:+212666666666">Phone : +212666-666666</a></li>
+                    <li><a href="https://www.google.com/maps/@31.5070442,-9.7517517,15z">Adress : <p>some text here</p></a></li>
+                    <li><a href="">Team</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Terms Of Use</h1>
+                <ul>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="">Some txt</a></li>
+
+                </ul>
+            </div>
+
+            <div class="col social">
+                <h1>Social</h1>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- END OF FOOTER -->
+
+
 
 
 
