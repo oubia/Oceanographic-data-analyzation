@@ -5,12 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 
-    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
- -->
-
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- leaflet js link -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -25,15 +21,14 @@
 </head>
 
 <body>
+    <!-- index.css -->
     <div class="topnav" id="myTopnav">
 
         <a href="./index.html"><img class=" img" src="logo3.PNG"></a>
 
         <ul>
             <a href="./index.html" class="active">Home</a>
-            <!-- <a href="./explore.html">Explore</a>
-            <a href="./about.html">About</a>
-            <a href="./contact.html">Contact</a> -->
+
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -51,62 +46,71 @@
     </div>
     <br>
 
+    <!-- select.css -->
 
     <div class="container">
-        <div class="choix_bar">
-            <div class="fs_select">
-                <label for="pet-select">Choose a data:</label>
-                <div class="form-group col-sm-12">
-                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
-                        <option value="Select A Data">Select A Data...</option>
-                        <option value="Data 1">Data 1</option>
-                        <option value="Data 2">Data 2</option>
-                        <option value="Data 3">Data 3</option>
-                        <option value="Data 4">Data 4</option>
-                    </select>
-                </div>
-            </div>
+        <div class="row ">
+            <div class="col-sm-12 offset-sm-2">
+                <div class="card " id="info-container">
+                    <div class="choix_bar">
+                        <div class="fs_select">
+                            <label for="pet-select">Choose a data:</label>
+                            <div class="form-group col-sm-12">
+                                <select id="choix" class="nbad-selectbox form-control ">
+                                    <option value="Select A Data">Select A Data...</option>
+                                    <option value="Data 1">Data 1</option>
+                                    <option value="Data 2">Data 2</option>
+                                    <option value="Data 3">Data 3</option>
+                                    <option value="Data 4">Data 4</option>
+                                </select>
+                            </div>
+                        </div>
 
 
-            <div class="sd_select">
-                <label for="pet-select">Choose a data:</label>
-                <div class="form-group col-sm-12">
-                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
-                      <option value="Select A Data">Select A Data...</option>
-                      <option value="Data 1">Data 1</option>
-                      <option value="Data 2">Data 2</option>
-                      <option value="Data 3">Data 3</option>
-                      <option value="Data 4">Data 4</option>
-                    </select>
-                </div>
-            </div>
+                        <div class="sd_select">
+                            <label for="pet-select">Choose a data:</label>
+                            <div class="form-group col-sm-12">
+                                <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                                <option value="Select A Data">Select A Data...</option>
+                                <option value="Data 1">Data 1</option>
+                                <option value="Data 2">Data 2</option>
+                                <option value="Data 3">Data 3</option>
+                                <option value="Data 4">Data 4</option>
+                                </select>
+                            </div>
+                        </div>
 
-            <div class="th_select">
-                <label for="pet-select">Choose a data:</label>
-                <div class="form-group col-sm-12">
-                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
-                      <option value="Select A Data">Select A Data...</option>
-                      <option value="Data 1">Data 1</option>
-                      <option value="Data 2">Data 2</option>
-                      <option value="Data 3">Data 3</option>
-                      <option value="Data 4">Data 4</option>
-                    </select>
+                        <div class="th_select">
+                            <label for="pet-select">Choose a data:</label>
+                            <div class="form-group col-sm-12">
+                                <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                                <option value="Select A Data">Select A Data...</option>
+                                <option value="Data 1">Data 1</option>
+                                <option value="Data 2">Data 2</option>
+                                <option value="Data 3">Data 3</option>
+                                <option     value="Data 4">Data 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-container">
+                        <img id="map" src='https://api.mapbox.com/oubia?access_token=pk.eypk.eyJ1Ijoib3ViaWEiLCJhIjoiY2tqajUzeHR1OW9nZjJybGJyNWFsbm0wOSJ9.OAqZ35gZBDkZ8ucOXOlePQ'>
+
+                    </div>
+
                 </div>
             </div>
 
 
         </div>
-        <div class="main-container">
-            <img id="map" src='https://api.mapbox.com/oubia?access_token=pk.eypk.eyJ1Ijoib3ViaWEiLCJhIjoiY2tqajUzeHR1OW9nZjJybGJyNWFsbm0wOSJ9.OAqZ35gZBDkZ8ucOXOlePQ'>
 
-        </div>
 
         <div class="reg_line"></div>
     </div>
 
 
-
-
+    <!-- footer.css -->
     <div class="footer">
         <div class="contain">
             <div class="col">
@@ -142,11 +146,10 @@
                     <li></li>
                 </ul>
             </div>
-            <div class="clearfix"></div>
+            <!-- <div class="clearfix"></div> -->
         </div>
     </div>
     <!-- END OF FOOTER -->
-
 
 
 
