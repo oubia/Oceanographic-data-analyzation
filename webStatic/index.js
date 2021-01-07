@@ -33,30 +33,27 @@
 
 // mymap.on('click', onMapClick);
 
-function myMap() {
-    var mapProp = {
-        center: new google.maps.LatLng(51.508742, -0.120850),
-        zoom: 5,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
 
-
-
-
-
-
-// search bar /////////////////
-// With JQuery
-$("#ex13").slider({
-    ticks: [0, 100, 200, 300, 400],
-    ticks_labels: ['$0', '$100', '$200', '$300', '$400'],
-    ticks_snap_bounds: 30
+var map = new ol.Map({
+    target: 'map',
+    layers: [
+        new ol.layer.Tile({
+            source: new ol.source.OSM()
+        })
+    ],
+    view: new ol.View({
+        center: ol.proj.fromLonLat([37.41, 8.82]),
+        zoom: 4
+    })
 });
 
-// Without JQuery
-var slider = new Slider("#ex13", {
-    ticks: [0, 100, 200, 300, 400],
-    ticks_labels: ['$0', '$100', '$200', '$300', '$400'],
-    ticks_snap_bounds: 30
-});
+
+
+// search date line  /////////////////
+
+
+// var slider = new Slider("#ex13", {
+//     ticks: [0, 100, 200, 300, 400],
+//     ticks_labels: ['$0', '$100', '$200', '$300', '$400'],
+//     ticks_snap_bounds: 30
+// });
