@@ -16,8 +16,8 @@ body {
 
 .logo_img {
     border-radius: 2%;
-    width: 10%;
-    margin: 4px;
+    width: 20%;
+    margin: 5px;
 }
 
 
@@ -36,7 +36,7 @@ ul {
 
 .topnav {
     overflow: hidden;
-    background-color: #44382d;
+    background-color: #6d6256;
     position: sticky;
     margin-top: 0;
     z-index: 100;
