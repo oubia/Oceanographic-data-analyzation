@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'nav/navbar.html' %}
+
+<head>
+    {% load static %}
+    <!-- date picker -->
+    <link href="dp-dark.css" rel="stylesheet">
+    <!-- <link href="dp-light.css" rel="stylesheet"> -->
+    <script src="datepicker.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- open layers map  links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+
+    <!-- css files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/select.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+
+
+
+    <title>Table</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-12 offset-sm-2">
+                <div class="card " id="info-container">
+                    <div class="choix_bar">
+                        <div class="sd_select">
+                            <label for="pet-select">Catches by</label>
+                            <div class="form-group col-sm-12">
+                                <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                                    <option value="Select A Data">Selectionner Catches...</option>
+                                <option value="Select A Data">Functional group</option>
+                                <option value="commercial group">commercial group</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="fs_select">
+                            <label for="pet-select">Species </label>
+                            <div class="form-group col-sm-12">
+                                <select id="choix" class="nbad-selectbox form-control ">
+                                    <option value="Select A Data">Selectionner Species...</option>
+                                    <option value="Common cuttlefish">Common cuttlefish</option>
+                                    <option value="Common octopus">Common octopus</option>
+                                    <option value="Blackbellied angler ">Blackbellied angler </option>
+                                    <option value="Silver scabbardfish">Silver scabbardfish</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="th_select">
+                            <label for="pet-select">Parametres</label>
+                            <div class="form-group col-sm-12">
+                                <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                                <option value="Select A Data">Selectionner un Parametre...</option>
+                                <option value="Catch">Catch</option>
+                                <option value="Biomass">Biomass</option>
+                                <option value="Biological parameters">Biological parameters</option>
+                                <option value="Diet composition">Diet composition</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="date_time_line ">
+                        <label for="select-date ">Selectionner une dates</label>
+                        <input type="range " min="1 " max="8 " id="my-range " list="my-datalist " />
+                        <datalist id="my-datalist " style="--list-length: 8; "><!--
+                            ---><option>1950</option><!--
+                            ---><option>1960</option><!--
+                            ---><option>1970</option><!--
+                            ---><option>1980</option><!--
+                            ---><option>1990</option><!--
+                            ---><option>2000</option><!--
+                            ---><option>2010</option><!--
+                            ---><option>2018</option><!--
+                            ---></datalist>
+                    </div>
+                    <div class="Upload_data ">
+                        <a href="./ ">Upload data</a>
+                    </div>
+                    <div class="main-container ">
+                        <table class="table table-hover table-striped table-bordered ">
+                            <thead class="thead-dark ">
+                                <th scope="col ">data1</th>
+                                <th scope="col ">data2</th>
+                                <th scope="col ">data3</th>
+                                <th scope="col ">data4</th>
+                            </thead>
+                            <tr>
+                                <td>data content</td>
+                                <td>data content</td>
+                                <td>data content</td>
+                                <td>data content</td>
+                            </tr>
+                            <tr>
+                                <td>data content</td>
+                                <td>data content</td>
+                                <td>data content</td>
+                                <td>data content</td>
+                            </tr>
+                            <tr>
+                                <td>data content</td>
+                                <td>data content</td>
+                                <td>data content</td>
+                                <td>data content</td>
+                            </tr>
+                            <tr>
+                                <td>data content</td>
+                                <td>data content</td>
+                                <td>data content</td>
+                                <td>data content</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="footer ">
+        <div class="contain ">
+            <div class="col ">
+                <h1>Company</h1>
+                <ul>
+                    <li><a href=" ">Some txt</a></li>
+                    <li><a href=" ">Some txt</a></li>
+                    <li><a href=" ">Some txt</a></li>
+                </ul>
+            </div>
+            <div class="col ">
+                <h1>Informations</h1>
+                <ul>
+                    <li><a href="mailto:contact@toubkalatlasmorocco.com ">Mail : xxxxxxx@emial.com</a></li>
+                    <li><a href="tel:+212666666666 ">Phone : +212666-666666</a></li>
+                    <li><a href="https://www.google.com/maps/@31.5070442,-9.7517517,15z ">Adress : <p>some text here</p></a></li>
+                    <li><a href=" ">Team</a></li>
+                </ul>
+            </div>
+            <div class="col ">
+                <h1>Terms Of Use</h1>
+                <ul>
+                    <li><a href="terms.html ">Terms</a></li>
+                    <li><a href="privacy_policy.html ">Privacy Policy</a></li>
+                    <li><a href=" ">Some txt</a></li>
+
+                </ul>
+            </div>
+
+            <div class="col social ">
+                <h1>Social</h1>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <!-- <div class="clearfix "></div> -->
+        </div>
+    </div>
+    <!-- END OF FOOTER -->
+    {% endblock %}
+</body>
+
+</html>}
