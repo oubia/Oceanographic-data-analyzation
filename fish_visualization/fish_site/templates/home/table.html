@@ -43,8 +43,10 @@
                             <div class="form-group col-sm-12">
                                 <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
                                     <option value="Select A Data">Selectionner Catches...</option>
-                                <option value="Select A Data">Functional group</option>
-                                <option value="commercial group">commercial group</option>
+                                    {% for data in b %}
+                                        
+                                        <option value="Select A Data">{{data}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>
@@ -93,38 +95,45 @@
                         <a href="./ ">Upload data</a>
                     </div>
                     <div class="main-container ">
-                        <table class="table table-hover table-striped table-bordered ">
-                            <thead class="thead-dark ">
-                                <th scope="col ">data1</th>
-                                <th scope="col ">data2</th>
+                        <div class="table-responsive text-nowrap">
+                            <table class="table table-hover  table-striped table-bordered cellspacing=" 0 "
+                        width="100% " overflow="scroll " height="400px ">
+                                <script></script>
+                                <thead class="thead-dark ">
+                                    {% for data in b %}
+                                    <th scope="col ">{{data}}</th>
+                                    {% endfor %}
+                                    <!-- <th scope="col ">data2</th>
                                 <th scope="col ">data3</th>
-                                <th scope="col ">data4</th>
-                            </thead>
-                            <tr>
-                                <td>data content</td>
-                                <td>data content</td>
-                                <td>data content</td>
-                                <td>data content</td>
-                            </tr>
-                            <tr>
-                                <td>data content</td>
-                                <td>data content</td>
-                                <td>data content</td>
-                                <td>data content</td>
-                            </tr>
-                            <tr>
-                                <td>data content</td>
-                                <td>data content</td>
-                                <td>data content</td>
-                                <td>data content</td>
-                            </tr>
-                            <tr>
-                                <td>data content</td>
-                                <td>data content</td>
-                                <td>data content</td>
-                                <td>data content</td>
-                            </tr>
-                        </table>
+                                <th scope="col ">data4</th> -->
+                                </thead>
+                                <tr>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                </tr>
+                                <tr>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                </tr>
+                                <tr>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                </tr>
+                                <tr>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                    <td>data content</td>
+                                </tr>
+                            </table>
+                        </div>
+
                     </div>
 
                 </div>
