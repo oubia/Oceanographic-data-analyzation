@@ -12,14 +12,19 @@ def home(request):
     return render(request, 'home/dashboard.html')
 
 
-
-def DataName(df):
-    return df.columns
+# change all dataframe to key value
+def ChangeToDic(df):
+    l=df.columns
+    key_list=l
+    value_list=l
+    g=dict(zip(key_list,value_list))
+    return g
+# def DataName(df):
+    # return df.columns
 def TablePage(request):
     df = pd.read_csv('E:/homy/S4/PFE/PFE/fish_visualization/fish_site/Data/Book1.csv', encoding = "cp1252")
-    # a= df.set_index('Species (common name)')
-    # b=a[a.isin(['Cephalopods']).any(axis=1)]
-    b=DataName(df)
-    c=len(b)
-    context={'b':b,'c':c}
+    
+    columnsName=ChangeToDic(df)
+    context={'columnsName':columnsName}
+    print(b)
     return render(request, 'home/table.html',context)

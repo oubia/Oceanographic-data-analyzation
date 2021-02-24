@@ -43,10 +43,10 @@
                             <div class="form-group col-sm-12">
                                 <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
                                     <option value="Select A Data">Selectionner Catches...</option>
-                                    {% for data in b %}
-                                        
-                                        <option value="Select A Data">{{data}}</option>
-                                    {% endfor %}
+                                    {% if 'Functional group' in columnsName  and 'commercial group' in columnsName%}
+                                        <option value="Select A Data">{{'Functional group'}}</option>
+                                        <option value="Select A Data">{{'commercial group'}}</option>
+                                    {% endif %}
                                 </select>
                             </div>
                         </div>
