@@ -34,6 +34,7 @@
 // mymap.on('click', onMapClick);
 
 
+<<<<<<< HEAD
 
 var map = new ol.Map({
     target: 'map',
@@ -47,12 +48,27 @@ var map = new ol.Map({
         zoom: 4
     })
 });
+=======
+// var map = new ol.Map({
+//     target: 'map',
+//     layers: [
+//         new ol.layer.Tile({
+//             source: new ol.source.OSM()
+//         })
+//     ],
+//     view: new ol.View({
+//         center: ol.proj.fromLonLat([37.41, 8.82]),
+//         zoom: 4
+//     })
+// });
+>>>>>>> b7fd2a3c4382a63ea76cf4ec274b0aa7f5e3f6b0
 
 
 
-// search date line  /////////////////
+// // search date line  /////////////////
 
 
+<<<<<<< HEAD
 // var slider = new Slider("#ex13", {
 //     ticks: [0, 100, 200, 300, 400],
 //     ticks_labels: ['$0', '$100', '$200', '$300', '$400'],
@@ -128,3 +144,10 @@ Path_file.forEach(console.log(Path_file.valueOf(Path_file)))
 
 
 
+=======
+// // var slider = new Slider("#ex13", {
+// //     ticks: [0, 100, 200, 300, 400],
+// //     ticks_labels: ['$0', '$100', '$200', '$300', '$400'],
+// //     ticks_snap_bounds: 30
+// // });
+>>>>>>> b7fd2a3c4382a63ea76cf4ec274b0aa7f5e3f6b0
