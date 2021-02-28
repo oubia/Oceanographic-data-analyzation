@@ -4,19 +4,13 @@
 
 <head>
     {% load static %}
-    <!-- date picker -->
-    <link href="dp-dark.css" rel="stylesheet">
-    <!-- <link href="dp-light.css" rel="stylesheet"> -->
-    <script src="datepicker.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- open layers map  links -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
 
     <!-- css files -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
@@ -43,10 +37,13 @@
                             <div class="form-group col-sm-12">
                                 <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
                                     <option value="Select A Data">Selectionner Catches...</option>
-                                    {% if 'Functional group' in columnsName  and 'commercial group' in columnsName%}
-                                        <option value="Select A Data">{{'Functional group'}}</option>
-                                        <option value="Select A Data">{{'commercial group'}}</option>
-                                    {% endif %}
+                                    <form action="" method="POST">
+                                        {% if 'Functional group' in columnsName  and 'commercial group' in columnsName%}
+                                            <option value="Select A Data">{{'Functional group'}}</option>
+                                            <option value="Select A Data">{{'commercial group'}}</option>
+                                        {% endif %}
+                                    </form>
+                                    
                                 </select>
                             </div>
                         </div>
@@ -91,46 +88,31 @@
                             ---><option>2018</option><!--
                             ---></datalist>
                     </div>
+
                     <div class="Upload_data ">
-                        <a href="./ ">Upload data</a>
+                        <a href="{} ">Upload data</a>
                     </div>
-                    <div class="main-container ">
+                    <div class="main-container" height="600px">
                         <div class="table-responsive text-nowrap">
                             <table class="table table-hover  table-striped table-bordered cellspacing=" 0 "
-                        width="100% " overflow="scroll " height="400px ">
+                        width="100% " overflow="scroll " height="100% ">
                                 <script></script>
                                 <thead class="thead-dark ">
-                                    {% for data in b %}
-                                    <th scope="col ">{{data}}</th>
+                                    {% for columnName in columnsName %}
+                                    <th scope="col ">{{columnName}}</th>
                                     {% endfor %}
                                     <!-- <th scope="col ">data2</th>
                                 <th scope="col ">data3</th>
                                 <th scope="col ">data4</th> -->
                                 </thead>
                                 <tr>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                    <td>data content</td>
+                                    {% for d in Data %}
+                                        {% for i in d.values %}
+                                            <td>{{i}}</td>
+                                        {% endfor %}
+                                    {% endfor %}
                                 </tr>
-                                <tr>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                </tr>
-                                <tr>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                </tr>
-                                <tr>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                    <td>data content</td>
-                                </tr>
+                               
                             </table>
                         </div>
 
