@@ -3,7 +3,7 @@
     width: 100%;
     position: absolute;
     height: auto;
-    background-color: #16265c86;
+    background-color: #E0FBFC;
 }
 
 .footer .col {
@@ -23,7 +23,7 @@
     font-size: 12px;
     line-height: 17px;
     padding: 20px 0px 5px 0px;
-    color: #99d5c7;
+    color: black;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.250em;
@@ -40,7 +40,7 @@
 .footer .col ul li {
     display: flex;
     justify-content: start;
-    color: #f5931f;
+    color: black;
     font-size: 14px;
     font-family: inherit;
     font-weight: bold;
@@ -52,7 +52,7 @@
 }
 
 .contain a {
-    color: #f5931f !important;
+    color: black !important;
 }
 
 .social ul li {
@@ -61,7 +61,7 @@
 }
 
 .footer .col ul li:hover {
-    color: #99d5c7;
+    color: #E0FBFC;
     transition: 0.1s;
     -webkit-transition: 0.1s;
     -moz-transition: 0.1s;

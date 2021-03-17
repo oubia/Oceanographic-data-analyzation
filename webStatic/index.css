@@ -36,7 +36,7 @@ ul {
 
 .topnav {
     overflow: hidden;
-    background-color: #16265c86;
+    background-color: #E0FBFC;
     position: sticky;
     margin-top: 0;
     z-index: 100;
@@ -62,7 +62,7 @@ ul {
 
 .topnav ul a.active {
     /* background-color:#f5931f ; */
-    color: #fff;
+    color: black;
     border-bottom: 3px solid #f5931f;
 }
 
@@ -126,7 +126,7 @@ ul {
 
 .hero-text a {
     text-decoration: none !important;
-    color: #fff;
+    color: black;
     background: #f5931f;
     padding: 13px;
     border-radius: 5px;
