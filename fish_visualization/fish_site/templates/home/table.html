@@ -4,23 +4,16 @@
 
 <head>
     {% load static %}
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <!-- css files -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/select.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
     <script src="{% static 'js/main.js' %}"></script>
-
-
-
-
 
     <title>Table</title>
 </head>
@@ -31,99 +24,81 @@
         <div class="row ">
             <div class="col-sm-12 offset-sm-2">
                 <div class="card " id="info-container">
-                    <div class="choix_bar">
-                        <div class="sd_select">
-                            <label for="pet-select">Catches by</label>
-                            <div class="form-group col-sm-12">
-                                <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="choix_bar">
+                            <div class="sd_select">
+                                <label for="pet-select">Catches by</label>
+                                <div class="form-group col-sm-12">
+                                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
                                     <option value="Select A Data">Selectionner Catches...</option>
-                                    <form action="" method="POST">
                                         {% if 'Functional group' in columnsName  and 'commercial group' in columnsName%}
-                                            <option value="Select A Data">{{'Functional group'}}</option>
-                                            <option value="Select A Data">{{'commercial group'}}</option>
+                                            <option value="{{Group}}">{{'Functional group'}}</option>
+                                            <option value="{{Group}}">{{'commercial group'}}</option>
                                         {% endif %}
-                                    </form>
-                                    
                                 </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="fs_select">
-                            <label for="pet-select">Species </label>
-                            <div class="form-group col-sm-12">
-                                <select id="choix" class="nbad-selectbox form-control ">
+                            <div class="fs_select">
+                                <label for="pet-select">Species </label>
+                                <div class="form-group col-sm-12">
+                                    <select id="choix" class="nbad-selectbox form-control ">
                                     <option value="Select A Data">Selectionner Species...</option>
-                                    <option value="Common cuttlefish">Common cuttlefish</option>
-                                    <option value="Common octopus">Common octopus</option>
-                                    <option value="Blackbellied angler ">Blackbellied angler </option>
-                                    <option value="Silver scabbardfish">Silver scabbardfish</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="th_select">
-                            <label for="pet-select">Parametres</label>
-                            <div class="form-group col-sm-12">
-                                <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
-                                <option value="Select A Data">Selectionner un Parametre...</option>
-                                <option value="Catch">Catch</option>
-                                <option value="Biomass">Biomass</option>
-                                <option value="Biological parameters">Biological parameters</option>
-                                <option value="Diet composition">Diet composition</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="date_time_line ">
-                        <label for="select-date ">Selectionner une dates</label>
-                        <input type="range " min="1 " max="8 " id="my-range " list="my-datalist " />
-                        <datalist id="my-datalist " style="--list-length: 8; "><!--
-                            ---><option>1950</option><!--
-                            ---><option>1960</option><!--
-                            ---><option>1970</option><!--
-                            ---><option>1980</option><!--
-                            ---><option>1990</option><!--
-                            ---><option>2000</option><!--
-                            ---><option>2010</option><!--
-                            ---><option>2018</option><!--
-                            ---></datalist>
-                    </div>
-
-                    <div class="Upload_data ">
-                        <a href="{} ">Upload data</a>
-                    </div>
-                    <div class="main-container" height="600px">
-                        <div class="table-responsive text-nowrap">
-                            <table class="table table-hover  table-striped table-bordered cellspacing=" 0 "
-                        width="100% " overflow="scroll " height="100% ">
-                                <script></script>
-                                <thead class="thead-dark ">
-                                    {% for columnName in columnsName %}
-                                    <th scope="col ">{{columnName}}</th>
+                                    {% for columnNames in spieces %}
+                                        <option value="{{Species}}">{{ columnNames|safe }}</option>
                                     {% endfor %}
-                                    <!-- <th scope="col ">data2</th>
-                                <th scope="col ">data3</th>
-                                <th scope="col ">data4</th> -->
+                                    
+
+                                </select>
+                                </div>
+                            </div>
+                            <div class="th_select">
+                                <label for="pet-select">Parametres</label>
+                                <div class="form-group col-sm-12">
+                                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                                        <option value="Select A Data">Selectionner un Parametre...</option>
+                                        <option value="Catch">Catch</option>
+                                        <option value="Biomass">Biomass</option>
+                                        <option value="Biological parameters">Biological parameters</option>
+                                        <option value="Diet composition">Diet composition</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Upload_data ">
+                            <input type="submit" href="./" value="Load data">
+
+                        </div>
+                    </form>
+
+
+
+
+
+
+                    <div class="main-container">
+                        <div id="collapse1" class="table-responsive text-nowrap">
+                            <table class="table table-hover table-striped table-bordered table-condensed table-scrollable">
+                                <thead class="thead-dark">
+                                    {% for columnName in columnsName %}
+                                    <th scope="col ">{{columnName|safe}}</th>
+                                    {% endfor %}
                                 </thead>
+                                {% for data in L %}
                                 <tr>
-                                    {% for d in Data %}
-                                        {% for i in d.values %}
-                                            <td>{{i}}</td>
-                                        {% endfor %}
+                                    {% for value in data %}
+                                    <td> {{value |striptags }} </td>
                                     {% endfor %}
                                 </tr>
-                               
+                                {% endfor %}
                             </table>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-    </div>
     <div class="footer ">
         <div class="contain ">
             <div class="col ">
@@ -152,18 +127,15 @@
 
                 </ul>
             </div>
-
             <div class="col social ">
                 <h1>Social</h1>
                 <ul>
                     <li></li>
                 </ul>
             </div>
-            <!-- <div class="clearfix "></div> -->
         </div>
     </div>
-    <!-- END OF FOOTER -->
     {% endblock %}
 </body>
 
-</html>}
+</html>

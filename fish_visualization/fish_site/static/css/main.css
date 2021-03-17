@@ -12,14 +12,10 @@ body {
 }
 
 
-/* logo  */
+/* Data table  */
 
-#mapid {
-    display: grid;
-    height: 180px;
-    width: 60%;
-    justify-self: center;
-}
+
+/* logo  */
 
 .container {
     align-items: center;

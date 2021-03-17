@@ -39,11 +39,6 @@ select {
     padding: 16px 16px 16px 16px;
 }
 
-#map {
-    height: 75vh;
-    width: 100%;
-}
-
 .choix_bar {
     flex-grow: 1;
 }
@@ -57,13 +52,13 @@ select {
     justify-content: center;
 }
 
-.Upload_data a:hover {
+.Upload_data>input[type=submit]:hover {
     color: #fff;
     background: #44382d;
     transition: 0.5s;
 }
 
-.Upload_data a {
+.Upload_data>input[type=submit] {
     text-decoration: none !important;
     color: #fff;
     background: #f5931f;

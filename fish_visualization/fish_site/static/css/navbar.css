@@ -20,7 +20,7 @@ ul {
 
 .topnav {
     overflow: hidden;
-    background-color: #44382d;
+    background-color: #3D5A80;
     position: sticky;
     margin-top: 0;
     z-index: 100;
@@ -29,7 +29,7 @@ ul {
 .topnav ul a {
     display: block;
     float: left;
-    color: #3d332b;
+    color: #3D5A80;
     text-align: center;
     padding: 10px 16px;
     text-decoration: none;
