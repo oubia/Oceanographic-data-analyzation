@@ -24,28 +24,25 @@
         <div class="row ">
             <div class="col-sm-12 offset-sm-2">
                 <div class="card " id="info-container">
-                    <form action="" method="POST">
-                        {% csrf_token %}
+                    <form name="form" method="POST" action="">
+                        {% csrf_token %} {{ form.as_p }}
                         <div class="choix_bar">
                             <div class="sd_select">
-                                <label for="pet-select">Catches by</label>
+                                <label for="Catches_by">Catches by</label>
                                 <div class="form-group col-sm-12">
-                                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                                    <select id="ddlWeatherLocation" name="Catches_by" class="nbad-selectbox form-control ">
                                     <option value="Select A Data">Selectionner Catches...</option>
-                                        {% if 'Functional group' in columnsName  and 'commercial group' in columnsName%}
-                                            <option value="{{Group}}">{{'Functional group'}}</option>
-                                            <option value="{{Group}}">{{'commercial group'}}</option>
-                                        {% endif %}
+                                            <option value="Functional group">Functional group</option>
                                 </select>
                                 </div>
                             </div>
                             <div class="fs_select">
-                                <label for="pet-select">Species </label>
+                                <label for="Species">Species </label>
                                 <div class="form-group col-sm-12">
-                                    <select id="choix" class="nbad-selectbox form-control ">
+                                    <select id="choix" class="nbad-selectbox form-control " name="Species">
                                     <option value="Select A Data">Selectionner Species...</option>
                                     {% for columnNames in spieces %}
-                                        <option value="{{Species}}">{{ columnNames|safe }}</option>
+                                        <option value="{{columnNames}}">{{ columnNames|safe }}</option>
                                     {% endfor %}
                                     
 
@@ -53,10 +50,11 @@
                                 </div>
                             </div>
                             <div class="th_select">
-                                <label for="pet-select">Parametres</label>
+                                <label for="Parametres">Parametres</label>
                                 <div class="form-group col-sm-12">
-                                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control ">
+                                    <select id="ddlWeatherLocation" class="nbad-selectbox form-control " name="Parametres">
                                         <option value="Select A Data">Selectionner un Parametre...</option>
+                                        <option value="Species">Species</option>
                                         <option value="Catch">Catch</option>
                                         <option value="Biomass">Biomass</option>
                                         <option value="Biological parameters">Biological parameters</option>
@@ -74,8 +72,11 @@
 
 
 
-
-
+                    {% if validation == validation %}
+                    <script>
+                        console.log("validation is done")
+                    </script>
+                    {% endif %}
                     <div class="main-container">
                         <div id="collapse1" class="table-responsive text-nowrap">
                             <table class="table table-hover table-striped table-bordered table-condensed table-scrollable">
@@ -84,10 +85,10 @@
                                     <th scope="col ">{{columnName|safe}}</th>
                                     {% endfor %}
                                 </thead>
-                                {% for data in L %}
+                                {% for data in final_data %}
                                 <tr>
                                     {% for value in data %}
-                                    <td> {{value |striptags }} </td>
+                                    <td> {{value |safe }} </td>
                                     {% endfor %}
                                 </tr>
                                 {% endfor %}
@@ -95,6 +96,7 @@
                         </div>
                     </div>
                 </div>
+                <img src="../../static/images/output.png" alt="not found" width="100%">
             </div>
         </div>
     </div>
