@@ -1,0 +1,162 @@
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+Species (common name);Species (latin name);Functional group;commercial group;Max length (cm);Trophic level;Depth range (m);Coord;Temperature (¨C);Vulnerability(%)
+Common cuttlefish;Sepia officinalis;Cephalopods;Other fishes and inverts;49;3.55;0-50;70°N-40°S;8.4 - 19.7;30
+Common octopus;Octopus vulgaris;Cephalopods;Other fishes and inverts;130;3.55;0-347;60°N-60°S;10 - 28.9;78
+Blackbellied angler ;Lophius budegassa;Large bathydemersals;Other fishes and inverts;100;4.41;300-1013;57°N-28°S;9 - 13.5;69
+Silver scabbardfish;Lepidopus caudatus;Large bathydemersals;Perch-likes;172;3.82;42-620;64°N-49°S;9.8 - 16;53
+Wreckfish ;Polyprion americanus;Large bathydemersals;Perch-likes;181;3.83;40-600;70°N-55°S;5.2 - 19;72
+Escolar;Lepidocybium flavobrunneum;Large bathypelagics;Perch-likes;200;4.34;200-1100;50°N-48°S;7 - 14.4;85
+Long snouted lancetfish;Alepisaurus ferox;Large bathypelagics;Other fishes and inverts;176;4.03;0-1830;84°N-57°S;4.7 - 14.6;83
+Opah;Lampris guttatus;Large bathypelagics;Other fishes and inverts;160;4.22;0-500;70°N-45°S;5 - 19.9;60
+Black scabbardfish ;Aphanopus carbo;Large benthopelagics;Perch-likes;110;4.50;200-1700;68°N-32°S;1.1 - 12.6;64
+Common dentex;Dentex dentex;Large benthopelagics;Perch-likes;92;4.53;0-200;60°N-15°S;13.3 - 21.1;66
+Flathead grey mullet;Mugil cephalus;Large benthopelagics;Perch-likes;100;2.13;0-120;62°N-57°S;11.3 - 27.9;42
+Greater forkbeard;Phycis blennoides;Large benthopelagics;Cod-likes;97;3.49;10-1047;69°N-30°S;5.4 - 14.6;52
+Largehead hairtail;Trichiurus lepturus;Large benthopelagics;Perch-likes;192;4.42;0-589;49°N-54°S;10.1 - 23.2;57
+Meagre;Argyrosomus regius;Large benthopelagics;Perch-likes;192;4.05;15-300;66°N-2°S;13.3 - 19.4;67
+Oilfish ;Ruvettus pretiosus;Large benthopelagics;Perch-likes;264;4.08;100-800;55°N-43°S;8.6 - 19;85
+Roudi escolar;Promethichthys prometheus ;Large benthopelagics;Perch-likes;100;4.18;80-800;50°N-36°S;8.6 - 16.5;57
+European conger;Conger conger;Large demersals;Other fishes and inverts;292;4.31;0-1171;68°N-12°S;4.4 - 14.4;86
+European eel;Anguilla anguilla;Large demersals;Other fishes and inverts;109;3.55;0-700;75°N-25°S;3 - 14.5;64
+European hake;Merluccius merluccius;Large demersals;Cod-likes;130;4.42;30-1075;72°N-18°S;6.9 - 15.4;64
+European seabass;Dicentrarchus labrax;Large demersals;Perch-likes;92;3.80;10-100;72°N-11°S;7.3 - 19.5;69
+White grouper;Epinephelus aeneus;Large demersals;Perch-likes;100;4.02;20-200;42°N-18°S;14.8 - 20.2;52
+Albacore ;(thunnus alalunga);Large pelagics;Tuna and billfishes;136;4.30;20-100;59°N-46°S;8.8 - 21.2;58
+Atlantic bluefin tuna ;(Thunnus thynnus);Large pelagics;Tuna and billfishes;376;4.45;0-985;72°N-58°S;7.5 - 24.7;82
+Atlantic sailfish ;Istiophorus albicans;Large pelagics;Tuna and billfishes;258;4.50;0-200;60°N-43°S;16.3 - 27.4;65
+Atlantic white marlin ;Kajikia albida;Large pelagics;Tuna and billfishes;246;4.49;0-150;47°N-39°S;15.7 - 27.9;41
+Bigeye tuna ;Thunnus obesus;Large pelagics;Tuna and billfishes;205;4.49;0-1500;45°N-43°S;16.8 - 28.6;56
+Blue marlin;Makaira nigricans;Large pelagics;Tuna and billfishes;410;4.49;0-1000;45°N-40°S;11.5 - 27.3;52
+Bluefish;Pomatomus saltatrix;Large pelagics;Perch-likes;113;4.53;0-200;45°N-44°S;8.4 - 27.5;63
+Common dolphinfish;Coryphaena hippurus;Large pelagics;Perch-likes;175;4.37;0-85;47°N-38°S;18.1 - 29.1;41
+Great barracuda;Sphyraena barracuda;Large pelagics;Perch-likes;179;4.49;1-100;45°N-35°S;21.7 - 28.9;79
+Leerfish;Lichia amia;Large pelagics;Perch-likes;144;4.50;0-50;47°N-28°S;16.2 - 29;77
+Little tunny;Euthynnus alletteratus;Large pelagics;Tuna and billfishes;100;4.49;5-150;56°N-39°S;11.5 - 27.8;57
+Longbill spearfish;Tetrapturus pfluegeri;Large pelagics;Tuna and billfishes;248;4.40;0-200;44°N-33°S;14.1 - 23.7;49
+Mediterranean spearfish;Tetrapturus belone;Large pelagics;Tuna and billfishes;197;4.50;0-200;46°N-30°S;13.7 - 19.3;45
+Plain bonito;Orcynopsis unicolor;Large pelagics;Tuna and billfishes;118;4.50;-;60°N-14°S;12.5 - 23.5;61
+Skipjack tuna;Katsuwonus pelamis;Large pelagics;Tuna and billfishes;102;4.43;0-260;63°N-47°S;13.3 - 29;38
+Swordfish;Xiphias gladius;Large pelagics;Tuna and billfishes;449;4.53;0-2878;61°N-50°S;10.9 - 27.6;72
+Wahoo;Acanthocybium solandri;Large pelagics;Perch-likes;227;4.26;0-20;45°N-38°S;18.2 - 27.6;46
+Yellowfin tuna ;Thunnus albacares;Large pelagics;Tuna and billfishes;231;4.41;1-250;52°N-45°S;16.5 - 28.9;51
+Blonde ray;Raja brachyura;Large rays;Sharks and rays;102;3.98;10-380;60°N-21°S;7.1 - 16.2;65
+Thornback ray;Raja clavata;Large rays;Sharks and rays;105;3.84;20-577;70°N-28°S;7.1 - 15.8;73
+Crevalle jack;Caranx hippos;Large reef assoc. Fish;Perch-likes;102;3.56;1-350;45°N-33°S;16.5 - 27.9;41
+Dusky grouper;Epinephelus marginatus;Large reef assoc. Fish;Sharks and rays;344;4.28;0-400;55°N-43°S;13.3 - 25.8;72
+Greater amberjack;Seriola dumerili;Large reef assoc. Fish;Perch-likes;156;4.50;1-360;45°N-28°S;16.9 - 29;54
+Mediterranean moray;Muraena helena;Large reef assoc. Fish;Other fishes and inverts;123;4.18;15-50;52°N-13°S;13.1 - 16.2;79
+Angular roughshark ;(Oxynotus centrina);Large sharks;Sharks and rays;123;3.06;40-777;53°N-28°S;9.5 - 15.3;80
+Basking shark ;Cetorhinus maximus;Large sharks;Sharks and rays;804;3.20;0-2000;72°N-55°S;5.4 - 22.7,;86
+Bigeye thresher ;Alopias superciliosus;Large sharks;Sharks and rays;400;4.51;0-730;46°N-40°S;19.2 - 29;84
+Birdbeak dogfish ;Deania calcea;Large sharks;Sharks and rays;100;4.33;60-1490;66°N-45°S;0.3 - 9.6;66
+Blacktip shark ;Carcharchinus limbatus;Large sharks;Sharks and rays;226;4.37;0-100;45°N-37°S;19.9 - 29;55
+Blue shark;Prionace glauca;Large sharks;Sharks and rays;328;4.35;1-1000;66°N-55°S; 5.9 - 25.2;77
+Bluntnose sixgill shark;Hexanchus griseus;Large sharks;Sharks and rays;395;4.48;janv-00;65°N-46°S;3.6 - 15.7;84
+Bramble shark;Echinorhinus brucus;Large sharks;Sharks and rays;254;4.38;10-900;61°N-48°S;4.1 - 13.9;85
+Copper shark;Carcharhinus brachyurus;Large sharks;Sharks and rays;266;4.50;0-360;45°N-52°S;11.6 - 23.8;87
+Duskey shark ;carcharhinus obscurus;Large sharks;Perch-likes;112;4.43;8-300;43°N-43°S;8.7 - 18.6;88
+Great hammerhead;Sphyrna mokarran;Large sharks;Sharks and rays;500;4.32;1-300;45°N-37°S;21.3 - 28.9;86
+Great white shark;Carcharodon carcharias;Large sharks;Sharks and rays;486;4.53;0-1200;60°N-50°S;11.3 - 24.9;86
+Gulper shark;Centrophorus granulosus;Large sharks;Sharks and rays;139;4.11;50-1440;48°N-34°S;7.7 - 17.3;80
+Kitefin shark;Dalatias licha;Large sharks;Sharks and rays;149;4.23;37-1800;60°N-48°S;2.5 - 14.3;65
+Leafscale gulper shark;Centrophorus squamosus;Large sharks;Sharks and rays;134;4.47;145-2400;64°N-45°S;4.1 - 10.6;86
+Longfin mako;Isurus paucus;Large sharks;Sharks and rays;342;4.51;0-1752;45°N-35°S;8.9 - 26.1;86
+Longnose velvet dogfish;Centroscymnus crepidater;Large sharks;Sharks and rays;104;4.16;230-1500;65°N-45°S;2.6 - 10.8;78
+Lowfin gulper shark;Centrophorus lusitanicus;Large sharks;Sharks and rays;131;4.43;300-1400;38°N-26°S;5.3 - 12;87
+Nursehound;Scyliorhinus stellaris;Large sharks;Sharks and rays;139;4.03;1-400;64°N-12°S;7.8 - 19.5;67
+Oceanic whitetip shark;Carcharhinus longimanus;Large sharks;Sharks and rays;328;4.16;0-230;46°N-43°S;17.9 - 28.9;79
+Piked dogfish;Squalus acanthias;Large sharks;Sharks and rays;131;4.37;0-1460;72°N-55°S;4.2 - 18.7;68
+Porbeagle;Lamna nasus;Large sharks;Sharks and rays;287;4.57;0-715;76°N-60°S;3.1 - 16.3;86
+Portuguese dogfish;Centroscymnus coelolepis;Large sharks;Sharks and rays;98;4.48;150-3700;64°N-48°S;0.8 - 10.3;75
+Sandbar shark;Carcharhinus plumbeus;Large sharks;Sharks and rays;205;4.49;0-500;45°N-38°S;16.6 - 28.9;88
+Scalloped hammerhead;Sphyrna lewini;Large sharks;Sharks and rays;353;4.08;0-1000;46°N-36°S;18.7 - 29;81
+Shortfin mako;Isurus oxyrinchus;Large sharks;Sharks and rays;392;4.50;0-750;64°N-50°S;9.7 - 24.4;83
+Silky shark;Carcharhinus falciformis;Large sharks;Sharks and rays;287;4.51;0-4000;40°N-40°S;12 - 28.9;79
+Smooth hammerhead;Sphyrna zygaena;Large sharks;Sharks and rays;410;4.94;0-200;53°N-55°S;11.8 - 28.9;85
+Smooth-hound;Mustelus mustelus;Large sharks;Sharks and rays;164;3.75;0-200;58°N-34°S;9.8 - 27.3;74
+Starry smooth-hound;Mustelus asterias;Large sharks;Sharks and rays;115;3.62;0-350;61°N-16°S;7 - 16.2;70
+Thresher ;Alopias vulpinus;Large sharks;Sharks and rays;623;4.50;0-650;67°N-58°S;11.6 - 28.2;73
+Tiger shark;Galeocerdo cuvier;Large sharks;Sharks and rays;615;4.54;0-800;62°N-42°S;15.8 - 28.9;64
+Tope shark;Galeorhinus galeus;Large sharks;Sharks and rays;160;4.34;0-1100;70°N-58°S;6.7 - 23.2;74
+European lobster;Homarus gammarus;Lobsters, crabs;crustaceans;65;2.60;0-150;70°N-25°S;7.7 - 13.3;46
+Norway lobster;Nephrops norvegicus;Lobsters, crabs;crustaceans;24;2.88;20-800;69°N-27°S;3.3 - 13.7;14
+Spinous spider crab;Maja squinado;Lobsters, crabs;crustaceans;13;2.94;0-150;62°N-28°S;8.2 - 20.1;12
+West african geryon;Chaceon maritae;Lobsters, crabs;crustaceans;17;2.85;200-2047;90°N-90°S;5.5 - 12;10
+Black cardinal fish ;Epigonus telescopus;Medium bathydemersals;Perch-likes;66;3.59;75-1200;65°N-43°S;4.6 - 13.8;70
+Blackbelly rosefish ;Helicolenus dactylopterus;Medium bathydemersals;scorpionfishes;39;3.54;50-1100;70°N-46°S; 4 - 18.1;54
+Spiny scorpionfish;Trachyscorpia cristulata echinata;Medium bathydemersals;scorpionfishes;50;4.21;200-2500;58°N-12°S;9.4 - 14.6;69
+Stout beardfish;Polymixia nobilis;Medium bathydemersals;Other fishes and inverts;40;4.20;100-770;90°N-90°S;8.4 - 15.3;43
+Atlantic pomfret ;Brama brama;Medium bathypelagics;Perch-likes;69;4.08;0-1000;65°N-42°S; 6.7 - 23.9;71
+Axillary seabream ;Pagellus acarne;Medium benthopelagics;Perch-likes;36;3.81;40-100;48°N-13°S;12 - 18.4;43
+Bearded brotula ;Brotula barbata;Medium benthopelagics;Other fishes and inverts;87;3.41;50-300;29°N-22°S;12.5 - 26.5;52
+Black seabream ;Spondyliosoma cantharus;Medium benthopelagics;Perch-likes;60;3.34;5-300;68°N-16°S;7 - 17.2;37
+Blackspot seabream ;pagellus bogaraveo;Medium benthopelagics;Perch-likes;70;4.21;150-700;65°N-20°; 6.9 - 14.9;57
+Blue butterfish;Stromateus fiatola;Medium benthopelagics;Perch-likes;50;3.91;oct-70;44°N-34°S;14.5 - 27.4;33
+Blue whiting;Micromesistius poutassou;Medium benthopelagics;Cod-likes;42;4.13;150-3000;79°N-26°S;3.1 - 13.9;34
+Common pandora;Pagellus erythrinus;Medium benthopelagics;Perch-likes;60;3.48;20-100;60°N-15°S;12.2 - 21;40
+Common twobanded seabream;Diplodus vulgaris;Medium benthopelagics;Perch-likes;41;3.52;0-160;50°N-40°S;15.9 - 21.6;48
+Cunene horse mackerel;Trachurus trecae;Medium benthopelagics;Perch-likes;32;3.30;20-100;36°N-21°S;16.4 - 27.9;36
+False scad ;Caranx rhonchus;Medium benthopelagics;Perch-likes;49;3.60;30-200;39°N-22°S;16.2 - 25.6;36
+Grey triggerfish;Balistes capriscus;Medium benthopelagics;Other fishes and inverts;53;4.06;0-55;58°N-37°S;9 - 26.2;35
+John dory;Zeus faber;Medium benthopelagics;Other fishes and inverts;79;4.50;5-400;63°N-47°S;6.7 - 23.7;68
+Largeeye dentex;Dentex macrophthalmus;Medium benthopelagics;Perch-likes;54;3.43;30-500;50°N-22°S;13 - 16.8;33
+Pouting;Trisopterus luscus;Medium benthopelagics;Cod-likes;42;3.73;30-100;62°N-25°N;7.1 - 12.8;44
+Red porgy;Pagrus pagrus;Medium benthopelagics;Perch-likes;73;3.86;0-250;57°N-38°S;15.8 - 27.8;66
+Sand steenbras;Lithognathus mormyrus;Medium benthopelagics;Perch-likes;45;3.38;0-150;50°N-40°S;17.1 - 27.5;44
+Sharpsnout seabream;Diplodus puntazzo;Medium benthopelagics;Perch-likes;43;3.22;0-150;42°N-28°S;16 - 21.6;34
+Silvery john dory;Zenopsis conchifer;Medium benthopelagics;Other fishes and inverts;69;4.50;50-600;58°N-28°S;6.1 - 20.1;61
+Splendid alfonsino;Beryx splendens;Medium benthopelagics;Other fishes and inverts;55;4.27;25-1300;65°N-43°S;6.6 - 12.9;57
+Vadigo;Campogramma glaycos;Medium benthopelagics;Perch-likes;54;4.50;15-30;55°N-12°S;10.3 - 20.7;45
+Bastard grunt ;Pomadasys incisus;Medium demersals;Perch-likes;43;3.80;10-100;47°N-14°S;18.3 - 27.9;40
+Bogue;Boops boops;Medium demersals;Perch-likes;32;2.79;0-350;63°N-16°S;11.7 - 27.7;50
+Brown meagre;Sciaena umbra;Medium demersals;Perch-likes;59;3.75;10-200;53°N-13°S;12.8 - 19.6;64
+Canary drum;Umbrina canariensis;Medium demersals;Perch-likes;65;3.37;50-300;50°N-28°S;11.9 - 19.7;44
+Gilthead seabream;Sparus aurata;Medium demersals;Perch-likes;57;3.70;1-150;57°N-43°S;12.1 - 21;40
+Lesser african threadfin;Galeoides decadactylus;Medium demersals;Perch-likes;36;3.57;oct-70;38°N-16°S;20.1 - 27.9;31
+Lusitanian toadfish;Halobatrachus didactylus;Medium demersals;Other fishes and inverts;41;3.89;oct-50;45°N-4°N;15.5 - 27.5;59
+Red mullet;Mullus barbatus barbatus;Medium demersals;Perch-likes;33;3.14;10-328;57°N-15°S; 13.1 - 15.9;29
+Red pandora;Pagellus bellotti;Medium demersals;Perch-likes;42;3.60;oct-50;35°N-25°S;18.5 - 28;49
+Rubberlip grunt;Plectorhinchus mediterraneus;Medium demersals;Perch-likes;80;3.49;10-180;45°N-22°S;16.1 - 24.4;54
+Senegalese hake;Merluccius senegalensis;Medium demersals;Cod-likes;73;4.50;15-800;33°N-12°S;10.2 - 16.8;69
+Shi drum ;Umbrina cirrosa;Medium demersals;Perch-likes;59;3.39;0-100;46°N-30°S;13.3 - 21;40
+Surmullet ;Mullus surmuletus;Medium demersals;Perch-likes;40;3.45;5-409;55°N-14°S;7 - 16.1;39
+White seabream;Diplodus sargus sargus;Medium demersals;Perch-likes;36;3.38;mai-50;47°N-28°S;15 - 24.1;63
+Alexandria pompano ;(Alectis alexandrina);Medium pelagics;Perch-likes;82;3.60;-;42°N-13°S;18.6 - 27.9;52
+Atlantic binito ;(Sarda sarda);Medium pelagics;Tuna and billfishes;84;4.50;80-200;65°N-40°S;7 - 23.4;33
+Atlantic chub mackerel ;Scomber colias;Medium pelagics;Perch-likes;49;3.91;-;46°N-40°S;13.9 - 27.3;43
+Atlantic horse mackerel ;Trachurus trachurus;Medium pelagics;Perch-likes;62;3.71;0-1050;70°N-28°S;10.6 - 16.6;59
+Atlantic saury ;Scomberesox saurus saurus;Medium pelagics;Other fishes and inverts;47;3.91;0-30;66°N-60°S;6.5 - 22;25
+Bullet tuna;Auxis rochei;Medium pelagics;Tuna and billfishes;47;4.13;-;61°N-51°S;13.6 - 29;27
+European argentine;Argentina sphyraena;Medium pelagics;Salmon, smelts, etc;35;3.62;50-700;70°N-25°S;6.4 - 13.3;36
+Frigate tuna;Auxis thazard;Medium pelagics;Tuna and billfishes;59;4.37;-;61°N-51°S;13.8 - 27.1;28
+Golden grey mullet;Liza auruta;Medium pelagics;Perch-likes;47;3.01;-;64°N-20°N; 9.7 - 20.7;35
+Madeiran sardinella;Sardinelle maderensis;Medium pelagics;Herring-likes;34;3.20;0-80;40°N-25°S;18 - 27.9;33
+Salema;Sarpa salpa;Medium pelagics;Perch-likes;51;2.00;mai-70;45°N-40°S;15.3 - 24;41
+Spotted seabass;Dicentrarchus punctatus;Medium pelagics;Perch-likes;57;3.94;30-;51°N-10°S;13.3 - 20.7;67
+West african spanish mackerel;Scomberomorus tritor;Medium pelagics;Perch-likes;82;4.26;janv-40;45°N-15°S;22.7 - 27.7;38
+Old parrotfish;Sparisoma cretense;Medium reef assoc.fish;Perch-likes;45;2.86;20-50;46°N-13°S;15.1 - 20.3;36
+Smooth callista;Callista chione;Other demersal invertebrates;Molluscs;10;2.00;10-180;57°N-27°S;10.8 - 21.5;10
+Striped venus ;Chamelea gallina;Other demersal invertebrates;Molluscs;5;2.10;mai-25;64°N-28°S;8.4 - 18.9;10
+Tuberculate cockle;Acanthocardia tuberculata;Other demersal invertebrates;Molluscs;8;2.50;mai-25;90°N-90°S;8 - 20.7;10
+Blue and red shrimp;Aristeus antennatus;Shrimps;crustaceans;22;3.29;100-2200;45°N-14°S;6.6 - 18.3;12
+Caramote prawn;Melicertus kerathurus;Shrimps;crustaceans;18;2.70;mai-75;45°N-17°S;15.2 - 21.6;17
+Deepwater rose shrimp;Parapenaeus longirostris;Shrimps;crustaceans;16;3.31;20-700;45°N-30°S;9.4 - 19.5;10
+Giant red shrimp;Aristaeomorpha foliacea;Shrimps;crustaceans;17;2.30;61-1300;35°N-27°S; 5.9 - 15.7;10
+Scarlet shrimp;Plesiopenaeus edwardsianus;Shrimps;crustaceans;19;2.30;200-2000;45°N-35°S; 3.7 - 12.6;10
+Knifetooth dogfish;Scymnodon ringens;Small  to medium sharks;Sharks and rays;88;3.88;550-1450;58°N-50°S;4.2 - 11.4;58
+Saddleb seabream;Oblada melanura;Small benthopelagics;Perch-likes;27;3.03;-;44°N-15°S;17.8 - 27.7;43
+African moonfish ;(selene dorsalis);Small demersals;Perch-likes;27;4.08;20-100;39°N-28°S;18.3 - 25.9;25
+Boarfish;Capros aper;Small demersals;Other fishes and inverts;23;3.14;40-700;62°N-10°S;6.9 - 15;51
+Longspine snipefish;Macroramphosus scolopax;Small demersals;Other fishes and inverts;16;3.47;25-600;66°N-43°S;6.5 - 22.7;27
+European anchovy;Engraulis encrasicolus;Small pelagics;Anchovies;20;3.11;0-400;62°N-37°S;7.1 - 18;25
+European pilchard;Sardina pilchardus;Small pelagics;Herring-likes;28;3.06;10-100;68°N-15°S;7.1 - 17.3;27
+Round sardinelle;Sardinella aurita;Small pelagics;Herring-likes;29;3.40;0-350;46°N-36°S;13.3 - 26.3;37
+Common sole;Solea solea;Small to medium flatfishes;Flatfishes;70;3.21;0-150;65°N-5°S;9.0 - 20 ;36
+Megrim;Lepidorhombus whiffiagonis;Small to medium flatfishes;Flatfishes;50;4.34;100-700;69°N-26°S;6.3 - 11.4;62
+Wedge sole;Dicologlossa cuneata;Small to medium flatfishes;Flatfishes;30;3.32;10-460;47°N-32°S;12.5 - 27.6;31
+Brown ray;Raja miraletus;Small to medium rays;Sharks and rays;52;3.80;17-462;44°N-35°S;13.1 - 25.6;51
+Undulate ray;Raja undulata;Small to medium rays;Sharks and rays;82;3.50;50-200;53°N-15°S;9.8 - 17.1;63
+Blackmouth catshark ;Galeus melastomus;Small to medium sharks;Sharks and rays;74;4.17;55-1873;64°N-14°S;4.4 - 14.4;57
+Smallspotted catshark;Scyliorhinus canicula;Small to medium sharks;Sharks and rays;82;3.82;10-780;63°N-12°S;7.2 - 16.2;62
