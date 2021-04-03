@@ -4,6 +4,7 @@ const Parametres = document.getElementById('Parametres')
 const Spieces = document.getElementById("Species")
 const Tablearea = document.getElementById("collapse1")
 const button_clicked = document.getElementById('creatbtn')
+const table_continer = document.getElementById('collapse1')
 
 function SelectCatches() {
     let catches_selected = catches_by.options[catches_by.selectedIndex].text;
@@ -108,33 +109,76 @@ $(document).ready(function() {
                     // }
 
                     function loadData() {
-                        const SelectSpiece_value = document.getElementById("Species")
-                        const slectGroup_value = document.getElementById("Group")
-                        let someliste = Object.values((Object.values(spieces_file)))
-                            // let resulte = Object.keys(spieces_file).map((key) => [String(key), spieces_file[key]])
+                        const Spiece_value = document.getElementById("Species")
+                        let SelectSpiece_value = Spiece_value.options[Spiece_value.selectedIndex].text
+                        const Group_value = document.getElementById("Group")
+                        let slectGroup_value = Group_value.options[Group_value.selectedIndex].text
 
+                        // let someliste = Object.values((Object.values(spieces_file)))
+                        // let resulte = Object.keys(spieces_file).map((key) => [String(key), spieces_file[key]])
+                        // console.log(typeof(someliste))
                         // console.log(resulte))
+                        let Column_name = (Object.keys(spieces_file))
                         let common_name = (Object.values((Object.entries(spieces_file))[0][1]))
                         let latine_name = (Object.values((Object.entries(spieces_file))[1][1]))
+                        let func_group = (Object.values((Object.entries(spieces_file))[2][1]))
                         let commircial_group = (Object.values((Object.entries(spieces_file))[3][1]))
                         let Max_length = (Object.values((Object.entries(spieces_file))[4][1]))
-                        console.log((Object.values((Object.entries(spieces_file))[5])))
-                        console.log(`value of select${SelectSpiece_value.value}`)
-                        console.log(`value of group${slectGroup_value.values}`)
-                            // console.log(funclist)
-                            // a = datainitial.pop()
-                            // console.log(datainitial.pop())
-                            // if ($.inArray(SelectSpiece_value, someliste) && $.inArray(slectGroup_value, funclist)) {
-                            //     // if (SelectSpiece_value in (Object.values(spieces_file)))
-                            //     // let indexliste = someliste.indexOf(SelectSpiece_value)
-                            //     // let indexfunc = funclist.indexOf(slectGroup_value)
-                            //     // console.log(indexliste)
-                            //     // console.log(indexfunc)
-                            //     // for (let i = 0; i < array.length; i++) {
-                            //     //     const element = array[i];
+                        let Trophic_level = (Object.values((Object.entries(spieces_file))[5][1]))
+                        let Depth_range = ((Object.values((Object.entries(spieces_file))[6][1])))
+                        let Coord = ((Object.values((Object.entries(spieces_file))[7][1])))
+                        let Temperature = ((Object.values((Object.entries(spieces_file))[8][1])))
+                        let Vulnerability = ((Object.values((Object.entries(spieces_file))[9][1])))
+                        let table = '<table id="table" class="table table-hover table-striped table-bordered table-condensed table-scrollable">'
+                        crood = []
+                        Coord.forEach(i => {
+                            i = i.replace(/ø/g, "°");
+                            crood.push(i)
+                        })
+                        column_name = []
+                        Column_name.forEach(i => {
+                            i = i.replace(/?/g, "°")
+                            column_name.push(i)
+                        })
+                        console.log(Vulnerability[0])
+                        if (($.inArray(SelectSpiece_value.value, latine_name)) && ($.inArray(slectGroup_value.value, func_group))) {
+                            let indexspieces = latine_name.indexOf(SelectSpiece_value)
+                            let indexfunc = func_group.indexOf(slectGroup_value)
 
-                        //     // }
-                        // }
+                            console.log(indexspieces)
+
+                            for (i = 0; i < 1; i++) {
+                                table += "<thead class='thead-dark'>"
+                                column_name.forEach(element => {
+                                    table += "<th scope='col'>" + element + "</th>"
+                                })
+                                table += '</thead>'
+                                table += '<tr>'
+                                for (i = 0; i < 1; i++) {
+                                    table += '<td>' + common_name[indexspieces] + '</td>'
+                                    table += '<td>' + latine_name[indexspieces] + '</td>'
+                                    table += '<td>' + func_group[indexspieces] + '</td>'
+                                    table += '<td>' + commircial_group[indexspieces] + '</td>'
+                                    table += '<td>' + Max_length[indexspieces] + '</td>'
+                                    table += '<td>' + Trophic_level[indexspieces] + '</td>'
+                                    table += '<td>' + Depth_range[indexspieces] + '</td>'
+                                    table += '<td>' + crood[indexspieces] + '</td>'
+                                    table += '<td>' + Temperature[indexspieces] + '</td>'
+                                    table += '<td>' + Vulnerability[indexspieces] + '</td>'
+                                }
+                                table += '</tr>'
+                                table += '</table>'
+
+                                table_continer.innerHTML = table
+
+
+                            }
+                            // console.log(indexfunc)
+                            // for (let i = 0; i < array.length; i++) {
+                            //     const element = array[i];
+
+                            // }
+                        }
                         // console.log(a)
                     }
 
