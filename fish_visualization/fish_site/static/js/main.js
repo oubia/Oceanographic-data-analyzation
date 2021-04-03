@@ -137,7 +137,7 @@ $(document).ready(function() {
                         })
                         column_name = []
                         Column_name.forEach(i => {
-                            i = i.replace(/?/g, "°")
+                            i = i.replace("?", "°")
                             column_name.push(i)
                         })
                         console.log(Vulnerability[0])
