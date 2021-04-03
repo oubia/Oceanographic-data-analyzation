@@ -1,0 +1,46 @@
+
+            function biomass_pelagic() {
+                let l = Array.from(Object.keys(data_small_spieces))
+                let ch = "Sardina pilchardus";
+
+                function get_index(ch) {
+                    y = []
+                    for (i = 0; i < (data_small_spieces[l[0]]).length; i++) {
+                        if (data_small_spieces[l[0]][i] == ch) {
+                            y.push(i)
+
+                        }
+                        console.log("==============")
+
+                    }
+                    return y
+                }
+                k = get_index(ch)
+                t = k[0]
+                e = []
+                r = []
+                indice = [];
+                for (i = 1; i < l.length; i++) {
+                    e.push(data_small_spieces[i][t])
+                }
+                r.push(parseInt(i))
+
+                for (i = 0; i < e.length; i++) {
+                    if (e[i] != '-') {
+                        indice.push(i)
+                    }
+                }
+
+                E = []
+                R = []
+                for (j in indice) {
+                    E.push(parseInt(e[j]))
+                    R.push(parseInt(r[j]))
+                }
+                console.log("===========")
+                console.log(E)
+                console.log(R)
+
+            };
+
+            window.addEventListener('load', biomass_pelagic());

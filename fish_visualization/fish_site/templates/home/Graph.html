@@ -4,37 +4,46 @@
 
 <head>
     {% load static %}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- css files -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-    <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/select.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
-    <!-- unique values -->
 
-    <script src="http://underscorejs.org/underscore-min.js"></script>
-    <!-- dataframe js befor installing npm and datafram js-->
-    <script src="https://gmousse.github.io/dataframe-js/dist/dataframe.js"></script>
-    <title>Table</title>
+    <title>Graph</title>
 </head>
 
 <body>
     {% block content %}
+
     <div class="container">
         <div class="row ">
             <div class="col-sm-12 offset-sm-2">
                 <div class="card " id="info-container">
-                    <form name="form" method="POST" id="creatForm" action="">
+                    <form name="form" method="POST" action="">
                         {% csrf_token %} {{ form.as_p }}
                         <div class="choix_bar">
-                            <div class="fs_select">
+                            <div class="th_select">
+                                <label for="Parametres">Parametres</label>
+                                <div class="form-group col-sm-12">
+                                    <select id="Parametres" class="nbad-selectbox form-control " name="Parametres">
+                                        <option value="Select A Data">Selectionner un Parametre...</option>
+                                        <option value="Species">Species</option>
+                                        <option value="Catch">Catch</option>
+                                        <option value="Biomass">Biomass</option>
+                                        <option value="Graph Biomass">Graph Biomass</option>
+                                        <option value="Biological parameters">Biological parameters</option>
+                                        <option value="Diet composition">Diet composition</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="sd_select">
                                 <label for="Catches_by">Catches by</label>
                                 <div class="form-group col-sm-12">
                                     <select id="Catches_by" name="Catches_by" class="nbad-selectbox form-control ">
@@ -43,32 +52,33 @@
                                 </select>
                                 </div>
                             </div>
-                            <div class="sd_select">
-                                <label for="Parametres">Parametres</label>
+                            <!-- <div class="fs_select">
+                                <label for="Species">Species's Group </label>
                                 <div class="form-group col-sm-12">
-                                    <select id="Parametres" class="nbad-selectbox form-control " name="Parametres">
-                                        <option value="Select A Data">Selectionner un Parametre...</option>
-                                        <option value="Species characteristic">Species characteristic</option>
-                                        <option value="Catch">Catch</option>
-                                        <option value="Biomass">Biomass</option>
-                                        <option value="Biological parameters">Biological parameters</option>
-                                        <option value="Diet composition">Diet composition</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="fh_select">
-                                <label for="Group">Group </label>
-                                <div class="form-group col-sm-12">
-                                    <select id="Group" class="nbad-selectbox form-control " name="Species">
-                                    <option value="Select Group">Select Group...</option>
+                                    <select id="choix" class="nbad-selectbox form-control " name="Group Species">
+                                    <option value="Select A Data">Select a group...</option>
+                                    {% for columnNames in spieces %}
+                                        <option value="{{columnNames}}">{{ columnNames|safe }}</option>
+                                    {% endfor %}
+                                    
+
                                 </select>
                                 </div>
-                            </div>
-                            <div class="fh_select">
+                            </div> -->
+
+                            <div class="fs_select">
                                 <label for="Species">Species </label>
                                 <div class="form-group col-sm-12">
                                     <select id="Species" class="nbad-selectbox form-control " name="Species">
-                                    <option value="Select Species">Select Species...</option>
+                                    <option value="Select A Data">Select Species...</option>
+                                    {% for columnNames in spieces %}
+                                        <option value="{{columnNames}}">{{ columnNames|safe }}</option>
+                                    {% endfor %}
+                                    <option value="Scomber colias">Scomber colias</option>
+                                    <option value="Engraulis encrasicolus">Engraulis encrasicolus</option>
+                                    <option value="Sardina pilchardus">Sardina pilchardus</option>
+
+
                                 </select>
                                 </div>
                             </div>
@@ -76,48 +86,17 @@
 
                         </div>
                         <div class="Upload_data ">
-                            <input id="creatbtn" type="button" href="./" value="Load data">
+                            <input type="submit" href="./" value="Load data">
 
                         </div>
                     </form>
-
-
-
-
-                    <!-- {% if validation == validation %}
-                    <script>
-                        fetch('Diet composition.json')
-                            .then(response => response.json())
-                            .then(data => {
-                                console.log(data)
-                            })
-                    </script>
-                    {% endif %} -->
-                    <div class="main-container">
-                        <div id="collapse1" class="table-responsive text-nowrap">
-                            <table class="table table-hover table-striped table-bordered table-condensed table-scrollable">
-                                <thead class="thead-dark">
-                                    {% for columnName in columnsName %}
-                                    <th scope="col ">{{columnName|safe}}</th>
-                                    {% endfor %}
-                                </thead>
-                                {% for data in final_data %}
-                                <tr>
-                                    {% for value in data %}
-                                    <td> {{value |safe }} </td>
-                                    {% endfor %}
-                                </tr>
-                                {% endfor %}
-                            </table>
-
-                        </div>
-                    </div>
-                    <canvas id="myChart" width="400" height="200"></canvas>
-
                 </div>
             </div>
         </div>
     </div>
+
+
+
 
     <div class="footer ">
         <div class="contain ">
