@@ -51,10 +51,6 @@ $(document).ready(function() {
             let diet_file = data.Diet_file
             let data_small_spieces = data.data_small_spieces
 
-            // console.log(array.forEach(element => {
-            // }))
-
-
             function SelectParametres() {
                 let parametre_selected = Parametres.options[Parametres.selectedIndex].text;
                 if ('Species characteristic' == parametre_selected) {
@@ -67,7 +63,6 @@ $(document).ready(function() {
                         opt.innerHTML = `${functionnal_group_values[i]}`
                         Group.appendChild(opt)
                     }
-
 
                     function SelectGoup() {
                         let Group_selected = Group.options[Group.selectedIndex].text;
@@ -93,31 +88,14 @@ $(document).ready(function() {
                             opt.innerHTML = `${Spieces_list[i]}`
                             Spieces.appendChild(opt)
                         }
-
                     }
                     Group.addEventListener('click', SelectGoup, false);
-
-
-                    // function SelectSpiece() {
-                    //     let Spiece_selected = Spieces.options[Spieces.selectedIndex].text;
-                    //     let Spieces_list_selected = ['0']
-                    //     Spieces_list_selected.push(Spiece_selected)
-                    //     SelectSpiece_value = String($(Spieces_list_selected).get(-1));
-                    //     console.log(SelectSpiece_value)
-                    //         // let datainitial = []
-                    //     datainitial = Object.values(spieces_file)
-                    // }
 
                     function loadData() {
                         const Spiece_value = document.getElementById("Species")
                         let SelectSpiece_value = Spiece_value.options[Spiece_value.selectedIndex].text
                         const Group_value = document.getElementById("Group")
                         let slectGroup_value = Group_value.options[Group_value.selectedIndex].text
-
-                        // let someliste = Object.values((Object.values(spieces_file)))
-                        // let resulte = Object.keys(spieces_file).map((key) => [String(key), spieces_file[key]])
-                        // console.log(typeof(someliste))
-                        // console.log(resulte))
                         let Column_name = (Object.keys(spieces_file))
                         let common_name = (Object.values((Object.entries(spieces_file))[0][1]))
                         let latine_name = (Object.values((Object.entries(spieces_file))[1][1]))
@@ -140,12 +118,8 @@ $(document).ready(function() {
                             i = i.replace("?", "°")
                             column_name.push(i)
                         })
-                        console.log(Vulnerability[0])
                         if (($.inArray(SelectSpiece_value.value, latine_name)) && ($.inArray(slectGroup_value.value, func_group))) {
                             let indexspieces = latine_name.indexOf(SelectSpiece_value)
-                            let indexfunc = func_group.indexOf(slectGroup_value)
-
-                            console.log(indexspieces)
 
                             for (i = 0; i < 1; i++) {
                                 table += "<thead class='thead-dark'>"
@@ -168,30 +142,11 @@ $(document).ready(function() {
                                 }
                                 table += '</tr>'
                                 table += '</table>'
-
                                 table_continer.innerHTML = table
-
-
                             }
-                            // console.log(indexfunc)
-                            // for (let i = 0; i < array.length; i++) {
-                            //     const element = array[i];
-
-                            // }
                         }
-                        // console.log(a)
                     }
-
                     button_clicked.addEventListener('click', loadData)
-                        // Spieces.addEventListener('click', SelectSpiece, false)
-
-                    function createTableCaractiristc() {
-                        // Tablearea
-
-
-
-                    }
-
                 } else if ('Catch' == parametre_selected) {
                     Group.length = 0
                     let functionnal_group = catch_file["functional_group"]
@@ -234,18 +189,10 @@ $(document).ready(function() {
                     }
                     Group.addEventListener('click', SelectGoup, false);
                 } else if ('Biomass' == parametre_selected) {
-                    // Group.length = 0
-                    // let functionnal_group = biomass_file["Functional group"]
-                    // let functionnal_group_values = _.uniq(Object.values(functionnal_group))
-                    // for (i = 0; i < functionnal_group_values.length; i++) {
-                    //     let opt = document.createElement('option')
-                    //     opt.value = functionnal_group_values[i]
-                    //     opt.innerHTML = `${functionnal_group_values[i]}`
-                    //     Group.appendChild(opt)
-                    // }
                     Group.length = 0
-                    let functionnal_group = Object.values(spieces_file["Functional group"]);
-                    let functionnal_group_values = _.uniq(Object.values(spieces_file["Functional group"]))
+                    console.log("biomass selected")
+                    let functionnal_group = biomass_file["Functional group"]
+                    let functionnal_group_values = _.uniq(Object.values(functionnal_group))
                     for (i = 0; i < functionnal_group_values.length; i++) {
                         let opt = document.createElement('option')
                         opt.value = functionnal_group_values[i]
@@ -253,20 +200,21 @@ $(document).ready(function() {
                         Group.appendChild(opt)
                     }
 
-                    function SelectGoup() {
+                    function SelectGoupBiomass() {
                         let Group_selected = Group.options[Group.selectedIndex].text;
-                        let Group_list = ['0']
+                        let Group_list = new Array
                         Group_list.push(Group_selected)
                         slectGroup_value = String($(Group_list).get(-1));
                         console.log(slectGroup_value)
-                        spieces_file = Object.assign(spieces_file)
+                        biomass_file = Object.assign(biomass_file)
 
                         function spicesListe() {
                             let slectedspieces = []
-                            for (i = 0; i < functionnal_group.length; i++)
+                            for (i = 0; i < Object.values(functionnal_group).length; i++) {
                                 if (functionnal_group[i] == slectGroup_value) {
-                                    slectedspieces.push(Object.values(Object.values(spieces_file))[1][i])
+                                    slectedspieces.push((Object.values(biomass_file["Specie (latin name)"])[i]))
                                 };
+                            }
                             return slectedspieces
                         }
                         Spieces.length = 0
@@ -278,29 +226,73 @@ $(document).ready(function() {
                             Spieces.appendChild(opt)
                         }
 
+                        function loadData() {
+                            const Spiece_value = document.getElementById("Species")
+                            let SelectSpiece_value = Spiece_value.options[Spiece_value.selectedIndex].text
+                            const Group_value = document.getElementById("Group")
+                            let slectGroup_value = Group_value.options[Group_value.selectedIndex].text
+                            let column_name = (Object.keys(biomass_file))
+                            liste_biomass = []
+                            for (i = 0; i < (Object.keys(biomass_file)).length; i++) {
+                                liste_biomass.push((Object.keys(biomass_file))[i])
+                            }
+                            column_name = liste_biomass.reverse()
+                            if ($.inArray(SelectSpiece_value, (Object.values(biomass_file["Specie (latin name)"]))) && $.inArray(slectGroup_value, functionnal_group)) {
+                                let indexspieces = (Object.values(biomass_file["Specie (latin name)"])).indexOf(SelectSpiece_value)
+                                let biomass_file2 = (Object.values(biomass_file)).reverse()
+                                let dataliste = []
+                                biomass_file2.forEach(i => {
+                                    dataliste.push((Object.values(i))[indexspieces])
+                                })
+                                let small_liste = []
+                                Object.values(data_small_spieces).forEach(i => {
+                                    small_liste.push(i)
+                                })
+                                small_liste = small_liste.reverse()
+                                let smallpil_name = small_liste[0]
+                                smallpil_name = Object.values(smallpil_name)
+                                if (($.inArray(SelectSpiece_value, smallpil_name)) != -1) {
+                                    table_continer.innerHTML = ''
+                                    console.log($.inArray(SelectSpiece_value, smallpil_name))
+                                    graph(SelectSpiece_value);
+                                } else {
+                                    canvas = document.getElementById("myChart");
+                                    if (canvas == null) {} else {
+                                        canvas.width = canvas.width
+                                    }
+
+                                    let table = '<table id="table" class="table table-hover table-striped table-bordered table-condensed table-scrollable">'
+                                    table += "<thead class='thead-dark'>"
+                                    column_name.forEach(element => {
+                                        table += "<th scope='col'>" + element + "</th>"
+                                    })
+                                    table += '</thead>'
+                                    table += '<tr>'
+                                    for (i = 0; i < dataliste.length; i++) {
+                                        table += '<td>' + dataliste[i] + '</td>'
+                                    }
+                                    table += '</tr>'
+                                    table += '</table>'
+                                    table_continer.innerHTML = table
+                                }
+                            }
+                        }
+                        button_clicked.addEventListener('click', loadData)
                     }
-                    Group.addEventListener('click', SelectGoup, false);
+                    Group.addEventListener('click', SelectGoupBiomass, false);
 
-
-                    function graph() {
-                        let liste = [];
-                        let dataliste = []
+                    function graph(ch) {
+                        table_continer.innerHTML = `<canvas id="myChart" width="400" height="200"></canvas>`
+                        let small_liste = []
                         Object.values(data_small_spieces).forEach(i => {
-                            dataliste.push(i)
+                            small_liste.push(i)
                         })
                         let years = (Object.keys(data_small_spieces))
                         years.pop()
-                        dataliste = dataliste.reverse()
-                        let smallpil_name = dataliste[0]
+                        small_liste = small_liste.reverse()
+                        let smallpil_name = small_liste[0]
                         smallpil_name = Object.values(smallpil_name)
-                            // console.log(l)
-                            // Scomber colias
-                            // Engraulis encrasicolus
-                            // Sardina pilchardus
-                        let ch = document.getElementById("Species")
-                        ch = ch.value
-                        console.log(ch)
-                        dataliste.shift()
+                        small_liste.shift()
 
                         function smallpilagic_liste(ch) {
                             function get_index(ch) {
@@ -309,8 +301,8 @@ $(document).ready(function() {
                             }
                             let j = get_index(ch)
                             let pushdata = []
-                            for (i = 0; i < dataliste.length; i++) {
-                                pushdata.push(dataliste[i][j])
+                            for (i = 0; i < small_liste.length; i++) {
+                                pushdata.push(small_liste[i][j])
                             }
                             let indice = []
                             let x = []
@@ -363,18 +355,6 @@ $(document).ready(function() {
                             }
                         });
                     }
-
-
-                    function SelectSpiece() {
-                        let Spiece_selected = Spieces.options[Spieces.selectedIndex].text;
-                        let Spieces_list = []
-                        Spieces_list.push(Spiece_selected)
-                            // console.log(`data is here${Spieces_list}`)
-                        console.log(Spieces_list)
-                    }
-                    Spieces.addEventListener('click', SelectSpiece, false)
-                    button_clicked.addEventListener('click', graph)
-
                 } else if ('Diet composition' == parametre_selected) {
                     Group.length = 0
                     let functionnal_group = diet_file["Prey \\ predator"]

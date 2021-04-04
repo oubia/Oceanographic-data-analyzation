@@ -66,7 +66,7 @@ def TablePage(request):
         Spieces_file = pd.read_csv('../fish_visualization/fish_site/Data/Species.csv', encoding = "cp1252")
         Diet_file = pd.read_json('../fish_visualization/fish_site/Data/Diet composition.json', encoding = "cp1252")
         data_catch = pd.read_csv('../fish_visualization/fish_site/Data/Mogador MPA data(catch).csv',sep=';',header=0)
-        data_biomass = pd.read_csv('../fish_visualization/fish_site/Data/Mogador MPA data(biomass).csv',sep=';',header=0)
+        data_biomass = pd.read_json('../fish_visualization/fish_site/Data/biomassjson.json',encoding = "cp1252")
         data_small_spieces = pd.read_csv("../fish_visualization/fish_site/Data/Biomass for small pelagic species.csv",sep=';',header=0)
 
 
