@@ -1,0 +1,40 @@
+Group name;Production / biomass (/year);Consumption / biomass (/year)
+Large deepwater;0.533;4.47
+Medium deepwater;0.352;6.352
+Large sharks;0.36;2.574
+Small to Medium sharks;0.36;3.196
+Small sharks;0.658;5.707
+Conger;0.533;4.47
+Meagre;2.305;4.887
+Bluefish;2.305;4.887
+Large bathypelagics;0.435;4.34
+Medium bathypelagics;0.525;7.482
+Scorpionfishes;0.352;6.167
+Large rays;0.32;3.196
+Small to medium rays;0.64;4.35
+Lobsters;0.282;5.85
+Large pelagics;0.777;3.206
+Medium pelagics;1.131;8.471
+Small pelagics;0.949;10.994
+Large benthopelagics;0.175;2.379
+Medium benthopelagics;0.494;7.45
+Pelagic medium predators;1.131;8.471
+Tunas;0.642;3.774
+Sardine;1.1;11.081
+Sardinella;1.1;11.08
+Atlantic mackerel;0.941;6.314
+Anchovies;0.525;7.482
+Flatfishes;1.2;8.626
+Tuna-like fish;0.642;3.774
+Large bathydemersals;0.502;6.513
+Very large demersals;2.305;4.887
+Large demersals;0.494;7.45
+Medium demersals;0.69;8.558
+Small demersals;1.445;10.957
+Octopus;3.1;11.7
+Cephalopods;3.1;11.7
+Demersal small invertebrate feeder;2;11.6
+Costal Medium herbivorous;1.07;13
+Crustaceans;1.7;11.333
+Molluscs;0.6;6.3
+Crabs;2.212;10

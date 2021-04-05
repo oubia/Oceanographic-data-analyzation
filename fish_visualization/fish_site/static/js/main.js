@@ -50,6 +50,7 @@ $(document).ready(function() {
             let biomass_file = data.data_biomass
             let diet_file = data.Diet_file
             let data_small_spieces = data.data_small_spieces
+            let biological_params = data.biological_params
 
             function SelectParametres() {
                 let parametre_selected = Parametres.options[Parametres.selectedIndex].text;
@@ -149,6 +150,7 @@ $(document).ready(function() {
                     button_clicked.addEventListener('click', loadData)
                 } else if ('Catch' == parametre_selected) {
                     Group.length = 0
+                    console.log(catch_file)
                     let functionnal_group = catch_file["functional_group"]
                     functionnal_group = Object.values(functionnal_group)
                     let functionnal_group_values = _.uniq(Object.values(functionnal_group))
@@ -165,7 +167,7 @@ $(document).ready(function() {
                         Group_list.push(Group_selected)
                         slectGroup_value = String(Group_list.pop());
                         // catch_file = Object.assign(catch_file)
-
+                        console.log(catch_file)
                         let a = Object.values(catch_file)
                             // what I need here is a column in csv file that named latine name to get data from it 
                         function spicesListe() {
@@ -190,7 +192,6 @@ $(document).ready(function() {
                     Group.addEventListener('click', SelectGoup, false);
                 } else if ('Biomass' == parametre_selected) {
                     Group.length = 0
-                    console.log("biomass selected")
                     let functionnal_group = biomass_file["Functional group"]
                     let functionnal_group_values = _.uniq(Object.values(functionnal_group))
                     for (i = 0; i < functionnal_group_values.length; i++) {
@@ -365,10 +366,55 @@ $(document).ready(function() {
                         opt.innerHTML = `${functionnal_group_values[i]}`
                         Group.appendChild(opt)
                     }
+                    let column_name = []
+                    Object.values(diet_file["Prey \\ predator"]).forEach(i => {
+                        column_name.push(i)
+                    })
+                    column_name.pop()
+
+                    function SelectGoupDiet() {
+                        let slectGroup_value = Group.options[Group.selectedIndex].text
+                        let Group_list = new Array
+                        Group_list.push(slectGroup_value)
+                        slectGroup_value = String($(Group_list).get(-1));
+                        diet_file = ((Object.values(diet_file)).reverse())
+
+                        function loadData() {
+                            table_continer.innerHTML = ''
+                            let a
+                            for (i = 0; i < column_name.length + 1; i++) {
+                                if (column_name[i] == slectGroup_value) {
+                                    a = i
+                                }
+                            }
+                            let dataliste = []
+                            for (i = 0; i < ((Object.values(diet_file))).length; i++) {
+                                dataliste.push((Object.values(diet_file))[i][a])
+                            }
+                            let table = '<table id="table" class="table table-hover table-striped table-bordered table-condensed table-scrollable">'
+                            table += "<thead class='thead-dark'>"
+                            table += "<th scope='col'>" + "Prey \\ predator" + "</th>"
+                            column_name.forEach(element => {
+                                table += "<th scope='col'>" + element + "</th>"
+                            })
+                            table += '</thead>'
+                            table += '<tr>'
+                            for (i = 0; i < dataliste.length; i++) {
+                                table += '<td>' + dataliste[i] + '</td>'
+                            }
+                            table += '</tr>'
+                            table += '</table>'
+                            table_continer.innerHTML = table
+                        }
+                        button_clicked.addEventListener('click', loadData)
+                    }
+                    Group.addEventListener('click', SelectGoupDiet, false);
                 } else if ('Biological parameters' == parametre_selected) {
                     Group.length = 0
-                    console.log(diet_file)
-                    let functionnal_group = diet_file["Prey \\ predator"]
+                    let group_biological = (Object.values(biological_params["Group name"]))
+                    let Consumption = (Object.values(biological_params["Consumption / biomass (/year)"]))
+                    let Production = (Object.values(biological_params["Production / biomass (/year)"]))
+                    let functionnal_group = biological_params["Group name"]
                     let functionnal_group_values = _.uniq(Object.values(functionnal_group))
                     for (i = 0; i < functionnal_group_values.length; i++) {
                         let opt = document.createElement('option')
@@ -376,6 +422,39 @@ $(document).ready(function() {
                         opt.innerHTML = `${functionnal_group_values[i]}`
                         Group.appendChild(opt)
                     }
+
+                    function SelectGoupBiological() {
+                        let Group_selected = Group.options[Group.selectedIndex].text;
+                        let Group_list = new Array
+                        Group_list.push(Group_selected)
+                        slectGroup_value = String($(Group_list).get(-1));
+
+                        let indexgroup = group_biological.indexOf(slectGroup_value)
+
+                        function loadData() {
+                            console.log((Object.keys(biological_params)))
+                            let params = (Object.keys(biological_params))
+                            let table = '<table id="table" class="table table-hover table-striped table-bordered table-condensed table-scrollable">'
+                            table += "<thead class='thead-dark'>"
+                            params.forEach(element => {
+                                table += "<th scope='col'>" + element + "</th>"
+                            })
+                            table += '</thead>'
+                            table += '<tr>'
+                            table += '<td>' + group_biological[indexgroup] + '</td>'
+                            table += '<td>' + Production[indexgroup] + '</td>'
+                            table += '<td>' + Consumption[indexgroup] + '</td>'
+                            table += '</tr>'
+                            table += '</table>'
+                            table_continer.innerHTML = table
+
+                        }
+                        button_clicked.addEventListener('click', loadData)
+
+                    }
+
+                    Group.addEventListener('click', SelectGoupBiological, false);
+                    table_continer.innerHTML = ''
                 } else if ('Selectionner un Parametre...' == parametre_selected) {
                     Group.length = 0
                     let opt = document.createElement('option')
