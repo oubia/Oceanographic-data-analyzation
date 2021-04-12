@@ -56,6 +56,8 @@ $(document).ready(function() {
                 let parametre_selected = Parametres.options[Parametres.selectedIndex].text;
                 if ('Species characteristic' == parametre_selected) {
                     Group.length = 0
+                    table_continer.innerHTML = ''
+
                     let functionnal_group = Object.values(spieces_file["Functional group"]);
                     let functionnal_group_values = _.uniq(Object.values(spieces_file["Functional group"]))
                     for (i = 0; i < functionnal_group_values.length; i++) {
@@ -148,50 +150,12 @@ $(document).ready(function() {
                         }
                     }
                     button_clicked.addEventListener('click', loadData)
-                } else if ('Catch' == parametre_selected) {
-                    Group.length = 0
-                    console.log(catch_file)
-                    let functionnal_group = catch_file["functional_group"]
-                    functionnal_group = Object.values(functionnal_group)
-                    let functionnal_group_values = _.uniq(Object.values(functionnal_group))
-                    for (i = 0; i < functionnal_group_values.length; i++) {
-                        let opt = document.createElement('option')
-                        opt.value = functionnal_group_values[i]
-                        opt.innerHTML = `${functionnal_group_values[i]}`
-                        Group.appendChild(opt)
-                    }
 
-                    function SelectGoup() {
-                        let Group_selected = Group.options[Group.selectedIndex].text;
-                        let Group_list = []
-                        Group_list.push(Group_selected)
-                        slectGroup_value = String(Group_list.pop());
-                        // catch_file = Object.assign(catch_file)
-                        console.log(catch_file)
-                        let a = Object.values(catch_file)
-                            // what I need here is a column in csv file that named latine name to get data from it 
-                        function spicesListe() {
-                            let slectedspieces = []
-                            for (i = 0; i < functionnal_group.length; i++)
-                                if (functionnal_group[i] == slectGroup_value) {
-                                    slectedspieces.push(Object.values(a[1])[i])
-                                };
-                            return slectedspieces
-                        }
-                        Spieces.length = 0
-                        console.log(spicesListe())
-                        let Spieces_list = spicesListe()
-                        for (i = 0; i < Spieces_list.length; i++) {
-                            let opt = document.createElement('option')
-                            opt.value = Spieces_list[i]
-                            opt.innerHTML = `${Spieces_list[i]}`
-                            Spieces.appendChild(opt)
-                        }
-
-                    }
-                    Group.addEventListener('click', SelectGoup, false);
+                    table_continer.innerHTML = ''
                 } else if ('Biomass' == parametre_selected) {
                     Group.length = 0
+                    table_continer.innerHTML = ''
+
                     let functionnal_group = biomass_file["Functional group"]
                     let functionnal_group_values = _.uniq(Object.values(functionnal_group))
                     for (i = 0; i < functionnal_group_values.length; i++) {
@@ -356,7 +320,9 @@ $(document).ready(function() {
                             }
                         });
                     }
+                    table_continer.innerHTML = ''
                 } else if ('Diet composition' == parametre_selected) {
+                    table_continer.innerHTML = ''
                     Group.length = 0
                     let functionnal_group = diet_file["Prey \\ predator"]
                     let functionnal_group_values = _.uniq(Object.values(functionnal_group))
@@ -411,6 +377,8 @@ $(document).ready(function() {
                     Group.addEventListener('click', SelectGoupDiet, false);
                 } else if ('Biological parameters' == parametre_selected) {
                     Group.length = 0
+                    table_continer.innerHTML = ''
+
                     let group_biological = (Object.values(biological_params["Group name"]))
                     let Consumption = (Object.values(biological_params["Consumption / biomass (/year)"]))
                     let Production = (Object.values(biological_params["Production / biomass (/year)"]))
@@ -457,6 +425,8 @@ $(document).ready(function() {
                     table_continer.innerHTML = ''
                 } else if ('Selectionner un Parametre...' == parametre_selected) {
                     Group.length = 0
+                    table_continer.innerHTML = ''
+
                     let opt = document.createElement('option')
                     opt.value = 'Select Group'
                     opt.innerHTML = 'Select Group...'
