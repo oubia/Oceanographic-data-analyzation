@@ -6,42 +6,12 @@ const Tablearea = document.getElementById("collapse1")
 const button_clicked = document.getElementById('creatbtn')
 const table_continer = document.getElementById('collapse1')
 
-function SelectCatches() {
-    let catches_selected = catches_by.options[catches_by.selectedIndex].text;
-    let catches_list = []
-    catches_list.push(catches_selected)
-    console.log(catches_list)
-}
-catches_by.addEventListener('click', SelectCatches, false);
-
-// function SelectGoup() {
-//     let Group_selected = Group.options[Group.selectedIndex].text;
-//     let Group_list = []
-//     Group_list.push(Group_selected)
-//     console.log(Group_list.pop());
-
-// }
-// Group.addEventListener('click', SelectGoup, false);
-
-// function SelectSpiece() {
-//     let Spiece_selected = Spieces.options[Spieces.selectedIndex].text;
-//     let Spieces_list = []
-//     Spieces_list.push(Spiece_selected)
-//         // console.log(`data is here${Spieces_list}`)
-//     return Spieces_list
-
-
-// }
-// Spieces.addEventListener('click', SelectSpiece, false)
-
-
 $(document).ready(function() {
     $.ajax({
         url: '',
         type: 'get',
         data: {
             ready_text: $(this).text()
-
         },
         success: function(response) {
             let data = JSON.parse(response.data)
@@ -57,7 +27,6 @@ $(document).ready(function() {
                 if ('Species characteristic' == parametre_selected) {
                     Group.length = 0
                     table_continer.innerHTML = ''
-
                     let functionnal_group = Object.values(spieces_file["Functional group"]);
                     let functionnal_group_values = _.uniq(Object.values(spieces_file["Functional group"]))
                     for (i = 0; i < functionnal_group_values.length; i++) {
@@ -72,7 +41,6 @@ $(document).ready(function() {
                         let Group_list = ['0']
                         Group_list.push(Group_selected)
                         slectGroup_value = String($(Group_list).get(-1));
-                        console.log(slectGroup_value)
                         spieces_file = Object.assign(spieces_file)
 
                         function spicesListe() {
@@ -170,7 +138,6 @@ $(document).ready(function() {
                         let Group_list = new Array
                         Group_list.push(Group_selected)
                         slectGroup_value = String($(Group_list).get(-1));
-                        console.log(slectGroup_value)
                         biomass_file = Object.assign(biomass_file)
 
                         function spicesListe() {
@@ -218,7 +185,6 @@ $(document).ready(function() {
                                 smallpil_name = Object.values(smallpil_name)
                                 if (($.inArray(SelectSpiece_value, smallpil_name)) != -1) {
                                     table_continer.innerHTML = ''
-                                    console.log($.inArray(SelectSpiece_value, smallpil_name))
                                     graph(SelectSpiece_value);
                                 } else {
                                     canvas = document.getElementById("myChart");
@@ -245,6 +211,7 @@ $(document).ready(function() {
                         button_clicked.addEventListener('click', loadData)
                     }
                     Group.addEventListener('click', SelectGoupBiomass, false);
+                    table_continer.innerHTML = ''
 
                     function graph(ch) {
                         table_continer.innerHTML = `<canvas id="myChart" width="400" height="200"></canvas>`
@@ -375,6 +342,7 @@ $(document).ready(function() {
                         button_clicked.addEventListener('click', loadData)
                     }
                     Group.addEventListener('click', SelectGoupDiet, false);
+                    table_continer.innerHTML = ''
                 } else if ('Biological parameters' == parametre_selected) {
                     Group.length = 0
                     table_continer.innerHTML = ''
@@ -400,7 +368,6 @@ $(document).ready(function() {
                         let indexgroup = group_biological.indexOf(slectGroup_value)
 
                         function loadData() {
-                            console.log((Object.keys(biological_params)))
                             let params = (Object.keys(biological_params))
                             let table = '<table id="table" class="table table-hover table-striped table-bordered table-condensed table-scrollable">'
                             table += "<thead class='thead-dark'>"
@@ -433,6 +400,7 @@ $(document).ready(function() {
                     Group.appendChild(opt)
 
                 }
+                table_continer.innerHTML = ''
             }
             Parametres.addEventListener('click', SelectParametres, false);
 

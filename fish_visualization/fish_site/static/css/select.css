@@ -1,6 +1,6 @@
 .choix_bar {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 16px;
     /* margin-left: 15%; */
     padding-bottom: 16px;
@@ -43,10 +43,6 @@ select {
     flex-grow: 1;
 }
 
-.offset-sm-2 {
-    margin-left: 0%;
-}
-
 .Upload_data {
     display: flex;
     justify-content: center;
@@ -65,10 +61,6 @@ select {
     padding: 13px;
     border-radius: 5px;
     transition: 0.5s;
-}
-
-.reg_line {
-    padding: 16px 16px 16px 16px;
 }
 
 

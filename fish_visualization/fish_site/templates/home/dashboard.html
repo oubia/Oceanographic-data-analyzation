@@ -12,23 +12,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <!-- W3 school fremwork -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <!-- Custom Stylesheet -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-
-
-
 
     <title>Home</title>
 </head>
@@ -99,7 +91,7 @@
                 <div class="w3-container w3-center">
                     <h3>Sardine</h3>
 
-                    <button data-toggle="collapse" data-target="#sardine" style="margin: 10px;background-color: #dda15e;border-color: #dda15e; border-radius: 5px;">Description</button>
+                    <button data-toggle="collapse" data-target="#sardine" style="width: 50%; margin: 10px;background-color: #dda15e;border-color: #dda15e; border-radius: 5px;">Description</button>
                     <div id="sardine" class="collapse">
                         The sardine (Sardina pilchardus Walb., 1792) found off the Northwest African coast, mainly between Cape Spartel and Cape Blanc. In the center of Moroccan Atlantic coast, this species is fished exclusively by the Moroccan fleet. The number of purse seiners
                         operating in this zone is around 150 during the fishing season (May-September). The fishing effort of these purse seiners which have the same characteristics as those that operate in the Northern Zone, is progressively decreasing
@@ -111,7 +103,7 @@
                 <div class="w3-container w3-center">
                     <h3>Octopus</h3>
 
-                    <button data-toggle="collapse" data-target="#Octopus" style="margin: 10px;background-color: #dda15e;border-color: #dda15e; border-radius: 5px;">Description</button>
+                    <button data-toggle="collapse" data-target="#Octopus" style="width: 50%;margin: 10px;background-color: #dda15e;border-color: #dda15e; border-radius: 5px;">Description</button>
                     <div id="Octopus" class="collapse">
                         Cephalopods are caught in center of Moroccan Atlantic coast (A+B zones) both as a target species by the specific fishery and as bycatch by the non-specific fishery. These fisheries are led by a heterogeneous fleet of vessels from the small canoes to the
                         bottom trawlers using such fishing gears as pots, jiggers and bottom trawls. Generally octopus (Octopus vulgaris, Lamarck, 1798) is the most abundant species and has the highest commercial value in the cephalopod fisheries, with
@@ -122,7 +114,7 @@
                 <img src="{% static 'images/Chub_mackerel.png' %}" style="width:50%;height: 50%;margin-top: 10px;" alt="Alps" style="width:50%; height: 5%; border-radius: 50%;">
                 <div class="w3-container w3-center">
                     <h3>Chub mackerel </h3>
-                    <button data-toggle="collapse" data-target="#Chub " style="margin: 10px;background-color: #dda15e;border-color: #dda15e; border-radius: 5px;">Description</button>
+                    <button data-toggle="collapse" data-target="#Chub " style="width: 50%;margin: 10px;background-color: #dda15e;border-color: #dda15e; border-radius: 5px;">Description</button>
                     <div id="Chub" class="collapse">
                         The chub mackerel (Scomber japonicus, Houttuyn,1872) is found in relatively cold waters. In Northwest Africa this species is most abundant from northern Morocco to Senegal. The central stock is fished by the Moroccan fleet which is composed of purse seiners
                         and trawlers. This species is caught as a by-catch. In 2017, total landings decreased by 56 percent to almost at the same level as 2014. The year 2018 was marked by the landing of 82 700 tonnes of mackerel, an increase of 94 percent
@@ -141,8 +133,9 @@
                     <img class="img" src="{% static 'images/fish bow.svg' %}" />
                     <div class="card-product card-product-infos-right">
                         <h2>Tables</h2>
-                        <p>You can display data on tables</p>
-                        More...
+                        <p>You can see fish data on a simple table.
+                        </p>
+                        check it out...
                     </div>
                 </a>
 
@@ -150,8 +143,8 @@
                     <img class="img" src="{% static 'images/graph.svg'%}" />
                     <div class="card-product card-product-infos-left">
                         <h2>Graph</h2>
-                        <p>You can display data on graphs </p>
-                        More...
+                        <p>You can see fish data on a simple graphs.</p>
+                        Check it out...
                     </div>
                 </a>
             </div>

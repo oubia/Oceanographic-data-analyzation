@@ -32,7 +32,6 @@ $(document).ready(function() {
                     let latine_name = Object.values(Object.values((catch_file))[1])
                     let funct_group = Object.values(Object.values((catch_file))[2])
                     let catch_data = Object.values(Object.values((catch_file))[3])
-                        // console.log(years)
 
                     function catch_function(ch) {
                         function get_index(ch) {
@@ -101,7 +100,6 @@ $(document).ready(function() {
                         let Group_list = []
                         Group_list.push(Group_selected)
                         slectGroup_value = String(Group_list.pop());
-                        // catch_file = Object.assign(catch_file)
                         let a = Object.values(catch_file)
                             // what I need here is a column in csv file that named latine name to get data from it 
                         function spicesListe() {
@@ -139,8 +137,8 @@ $(document).ready(function() {
                                         datasets: [{
                                             label: ch,
                                             data: madata,
-                                            backgroundColor: ['rgb(0,0,0,0.2)'],
-                                            borderColor: ['rgb(0,0,0,0.8)'],
+                                            backgroundColor: ['rgb(221,161,94,0.2)'],
+                                            borderColor: ['rgb(221,161,94,0.8)'],
                                             borderWidth: 1
                                         }]
                                     },
@@ -259,8 +257,8 @@ $(document).ready(function() {
                                 datasets: [{
                                     label: ch,
                                     data: madata[0],
-                                    backgroundColor: ['rgb(0,0,0,0.2)'],
-                                    borderColor: ['rgb(0,0,0,0.8)'],
+                                    backgroundColor: ['rgb(221,161,94,0.2)'],
+                                    borderColor: ['rgb(221,161,94,0.8)'],
                                     borderWidth: 1
                                 }]
                             },
@@ -279,7 +277,6 @@ $(document).ready(function() {
                 } else if ('Selectionner un Parametre...' == parametre_selected) {
                     Group.length = 0
                     table_continer.innerHTML = ''
-
                     let opt = document.createElement('option')
                     opt.value = 'Select Group'
                     opt.innerHTML = 'Select Group...'
